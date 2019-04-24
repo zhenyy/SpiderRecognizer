@@ -288,27 +288,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-C2-sOC">
-                                <rect key="frame" x="58" y="171" width="299" height="299"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="299" id="RuI-Rn-dup"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-C2-sOC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a photo or open library" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xak-In-jpU">
-                                <rect key="frame" x="100.66666666666669" y="552" width="213" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="4Q5-C2-sOC" firstAttribute="centerX" secondItem="Xak-In-jpU" secondAttribute="centerX" id="F8r-98-PiZ"/>
-                            <constraint firstItem="4Q5-C2-sOC" firstAttribute="centerX" secondItem="DI6-hA-Gnb" secondAttribute="centerX" id="VfQ-zM-xCv"/>
-                            <constraint firstItem="Xak-In-jpU" firstAttribute="top" secondItem="4Q5-C2-sOC" secondAttribute="bottom" constant="82" id="WhR-gB-iz3"/>
-                            <constraint firstItem="4Q5-C2-sOC" firstAttribute="top" secondItem="C2d-lB-OOA" secondAttribute="bottom" constant="107" id="e08-RY-rYH"/>
-                            <constraint firstItem="4Q5-C2-sOC" firstAttribute="leading" secondItem="DI6-hA-Gnb" secondAttribute="leadingMargin" constant="38" id="nxb-k5-TD0"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Upload Photo" id="h6e-aD-TeW">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="QSX-WP-9qW">
@@ -330,7 +315,6 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="classifier" destination="Xak-In-jpU" id="Auu-rS-T1b"/>
                         <outlet property="imageView" destination="4Q5-C2-sOC" id="IDe-nh-fQE"/>
                     </connections>
                 </viewController>

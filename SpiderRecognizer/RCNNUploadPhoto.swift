@@ -125,7 +125,7 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
                  */
                 
                 let width = view.bounds.width
-                let height = width * 16 / 9
+                let height = width * 10 / 9 // it used to be 16 / 9 but the box is too large
                 let offsetY = (view.bounds.height - height) / 2
                 let scale = CGAffineTransform.identity.scaledBy(x: width, y: height)
                 let transform = CGAffineTransform(scaleX: 1, y: -1).translatedBy(x: 0, y: -height - offsetY)
@@ -186,25 +186,10 @@ extension RCNNUploadPhoto: UIImagePickerControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    func takeScreenshot(_ shouldSave: Bool = true) -> UIImage? {
-        var screenshotImage :UIImage?
-        let layer = UIApplication.shared.keyWindow!.layer
-        let scale = UIScreen.main.scale
-        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
-        guard let context = UIGraphicsGetCurrentContext() else {return nil}
-        layer.render(in:context)
-        screenshotImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        if let image = screenshotImage, shouldSave {
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        }
-        return screenshotImage
-    }
-    
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         picker.dismiss(animated: true)
-        classifier.text = "Analyzing Image..."
+//        classifier.text = "Analyzing Image..."
         guard let image = info["UIImagePickerControllerOriginalImage"] as? UIImage else {
             return
         } //1
