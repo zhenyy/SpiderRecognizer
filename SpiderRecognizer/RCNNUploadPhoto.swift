@@ -16,7 +16,7 @@ import CoreMedia
 class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var classifier: UILabel!
+//    @IBOutlet weak var classifier: UILabel!
     
     var currentBuffer: CVPixelBuffer?
     
