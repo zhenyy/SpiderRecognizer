@@ -30,6 +30,10 @@
 	<string>This app needs access to your photo library</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>For you to upload a photo for spider recognition</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>For you to upload the location of this spider</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4358780465DA562AF22161 /* Pods_SpiderRecognizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30369E2639470CFB894CF986 /* Pods_SpiderRecognizer.framework */; };
 		182DFC8F224F799600348D8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFC8E224F799600348D8B /* AppDelegate.swift */; };
 		182DFC91224F799600348D8B /* CNNScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFC90224F799600348D8B /* CNNScan.swift */; };
 		182DFC96224F799900348D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC95224F799900348D8B /* Assets.xcassets */; };
 		182DFC99224F799900348D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC97224F799900348D8B /* LaunchScreen.storyboard */; };
 		182DFCA3224F830300348D8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DFCA2224F830300348D8B /* icon.png */; };
+		2708BB652283C45600FEB873 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2708BB642283C45600FEB873 /* GoogleService-Info.plist */; };
 		AE0E9588227042D100733CEF /* Red-Headed Mouse Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E957F227042CA00733CEF /* Red-Headed Mouse Spider.png */; };
 		AE0E9589227042D100733CEF /* Funnel Web Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9580227042CA00733CEF /* Funnel Web Spider.png */; };
 		AE0E958A227042D100733CEF /* Australian Tarantulas.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9581227042CA00733CEF /* Australian Tarantulas.png */; };
@@ -40,6 +42,10 @@
 		182DFC98224F799900348D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182DFC9A224F799900348D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182DFCA2224F830300348D8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		2708BB642283C45600FEB873 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30369E2639470CFB894CF986 /* Pods_SpiderRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiderRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F8A1EA8A24761F9F9F39B0 /* Pods-SpiderRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderRecognizer.release.xcconfig"; path = "Target Support Files/Pods-SpiderRecognizer/Pods-SpiderRecognizer.release.xcconfig"; sourceTree = "<group>"; };
+		8E70A1F48161D7D272E3454D /* Pods-SpiderRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderRecognizer.debug.xcconfig"; path = "Target Support Files/Pods-SpiderRecognizer/Pods-SpiderRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0E957F227042CA00733CEF /* Red-Headed Mouse Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red-Headed Mouse Spider.png"; sourceTree = "<group>"; };
 		AE0E9580227042CA00733CEF /* Funnel Web Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Funnel Web Spider.png"; sourceTree = "<group>"; };
 		AE0E9581227042CA00733CEF /* Australian Tarantulas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Australian Tarantulas.png"; sourceTree = "<group>"; };
@@ -65,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D4358780465DA562AF22161 /* Pods_SpiderRecognizer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +83,8 @@
 			children = (
 				182DFC8D224F799600348D8B /* SpiderRecognizer */,
 				182DFC8C224F799600348D8B /* Products */,
+				7A9E137090BAA3678F653999 /* Pods */,
+				A4F54629B92C7385B8A2545B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +99,7 @@
 		182DFC8D224F799600348D8B /* SpiderRecognizer */ = {
 			isa = PBXGroup;
 			children = (
+				2708BB642283C45600FEB873 /* GoogleService-Info.plist */,
 				AE0E957E227042CA00733CEF /* wiki images */,
 				AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */,
 				182DFC8E224F799600348D8B /* AppDelegate.swift */,
@@ -108,6 +118,23 @@
 				AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */,
 			);
 			path = SpiderRecognizer;
+			sourceTree = "<group>";
+		};
+		7A9E137090BAA3678F653999 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E70A1F48161D7D272E3454D /* Pods-SpiderRecognizer.debug.xcconfig */,
+				75F8A1EA8A24761F9F9F39B0 /* Pods-SpiderRecognizer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A4F54629B92C7385B8A2545B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30369E2639470CFB894CF986 /* Pods_SpiderRecognizer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AE0E957E227042CA00733CEF /* wiki images */ = {
@@ -133,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 182DFC9D224F799900348D8B /* Build configuration list for PBXNativeTarget "SpiderRecognizer" */;
 			buildPhases = (
+				333A87161E4D949AFB6BE946 /* [CP] Check Pods Manifest.lock */,
 				182DFC87224F799600348D8B /* Sources */,
 				182DFC88224F799600348D8B /* Frameworks */,
 				182DFC89224F799600348D8B /* Resources */,
+				75466C0A7505E98405F0D4EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,10 +226,62 @@
 				AE33D3F322561F4A003C0DA1 /* Main.storyboard in Resources */,
 				AE0E958D227042D100733CEF /* Garden Orb Weaver Spider.png in Resources */,
 				AE0E9588227042D100733CEF /* Red-Headed Mouse Spider.png in Resources */,
+				2708BB652283C45600FEB873 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		333A87161E4D949AFB6BE946 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpiderRecognizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75466C0A7505E98405F0D4EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpiderRecognizer/Pods-SpiderRecognizer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpiderRecognizer/Pods-SpiderRecognizer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		182DFC87224F799600348D8B /* Sources */ = {
@@ -352,6 +433,7 @@
 		};
 		182DFC9E224F799900348D8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E70A1F48161D7D272E3454D /* Pods-SpiderRecognizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -371,6 +453,7 @@
 		};
 		182DFC9F224F799900348D8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75F8A1EA8A24761F9F9F39B0 /* Pods-SpiderRecognizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

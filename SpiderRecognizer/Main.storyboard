@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dJN-pa-QwB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dJN-pa-QwB">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -489,25 +489,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCM-Vi-PSA">
-                                <rect key="frame" x="167" y="280" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCM-Vi-PSA">
+                                <rect key="frame" x="167" y="210" width="80" height="30"/>
                                 <state key="normal" title="Basic Mode"/>
                                 <connections>
                                     <segue destination="4oi-FG-6Ii" kind="presentation" id="x17-Gj-Rtn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDa-8N-IQa">
-                                <rect key="frame" x="151.66666666666666" y="353" width="110.99999999999997" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDa-8N-IQa">
+                                <rect key="frame" x="152" y="282" width="110.99999999999997" height="30"/>
                                 <state key="normal" title="Advanced Mode"/>
                                 <connections>
                                     <segue destination="Vky-Mg-yRY" kind="presentation" id="i07-92-eKI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVs-WQ-GOU">
-                                <rect key="frame" x="158.66666666666666" y="428" width="97" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVs-WQ-GOU">
+                                <rect key="frame" x="159" y="353" width="97" height="30"/>
                                 <state key="normal" title="Spider Gallary"/>
                                 <connections>
                                     <segue destination="oQo-JU-C61" kind="presentation" id="eQw-OF-Cwd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLQ-pg-xEM">
+                                <rect key="frame" x="168" y="504" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Spider Map"/>
+                                <connections>
+                                    <action selector="jumpToMap:" destination="dJN-pa-QwB" eventType="touchUpInside" id="8dI-Sj-ao6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -657,12 +665,20 @@
                             <constraint firstItem="EKh-3X-fJp" firstAttribute="top" secondItem="Buo-E6-Egz" secondAttribute="bottom" constant="41" id="yqr-Vu-EH9"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Upload Photo" id="BBF-e8-H0x">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="1Pa-tq-weN">
-                            <connections>
-                                <segue destination="4oi-FG-6Ii" kind="presentation" id="Cs7-VF-h3j"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Back" id="1Pa-tq-weN">
+                                <connections>
+                                    <segue destination="4oi-FG-6Ii" kind="presentation" id="Cs7-VF-h3j"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Send" id="iwt-tJ-oLE">
+                                <connections>
+                                    <action selector="sendLocation:" destination="0pn-65-1aZ" id="CxU-MH-Uzl"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem title="Library" id="aFe-GH-IRC">
                                 <connections>
@@ -676,6 +692,7 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="classifier" destination="EKh-3X-fJp" id="sgd-jb-Y2r"/>
                         <outlet property="imageView" destination="Buo-E6-Egz" id="fuX-zw-Pjg"/>
@@ -872,21 +889,20 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Australian Tarantulas.png" width="887" height="828"/>
-        <image name="Daddy Long Legs Spider.png" width="798" height="534"/>
-        <image name="Funnel Web Spider.png" width="2048" height="1533"/>
-        <image name="Garden Orb Weaver Spider.png" width="920" height="659"/>
-        <image name="Huntsman Spider.png" width="2712" height="2244"/>
-        <image name="Red-Headed Mouse Spider.png" width="800" height="599"/>
-        <image name="Redback Spider.png" width="800" height="586"/>
-        <image name="St Andrews Cross Spider.png" width="4196" height="3253"/>
-        <image name="White-Tailed Spider.png" width="550" height="400"/>
+        <image name="Australian Tarantulas.png" width="874.84930419921875" height="816.65753173828125"/>
+        <image name="Daddy Long Legs Spider.png" width="592.32989501953125" height="396.37112426757812"/>
+        <image name="Funnel Web Spider.png" width="1520.1649169921875" height="1137.8968505859375"/>
+        <image name="Garden Orb Weaver Spider.png" width="217.89472961425781" height="156.07894897460938"/>
+        <image name="Huntsman Spider.png" width="1933.306884765625" height="1599.6832275390625"/>
+        <image name="Red-Headed Mouse Spider.png" width="593.814453125" height="444.61856079101562"/>
+        <image name="Redback Spider.png" width="593.814453125" height="435"/>
+        <image name="St Andrews Cross Spider.png" width="853.4237060546875" height="661.62713623046875"/>
+        <image name="White-Tailed Spider.png" width="408.2474365234375" height="296.9072265625"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dbF-Th-Qlr"/>
         <segue reference="x17-Gj-Rtn"/>
         <segue reference="i07-92-eKI"/>
-        <segue reference="yLz-1a-X6r"/>
-        <segue reference="EGG-aQ-TfL"/>
+        <segue reference="jXN-Z8-adc"/>
+        <segue reference="eQw-OF-Cwd"/>
     </inferredMetricsTieBreakers>
 </document>

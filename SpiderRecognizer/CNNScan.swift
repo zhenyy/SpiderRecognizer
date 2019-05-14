@@ -22,6 +22,7 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         return label
     }()
     
+    
     override func viewDidLoad() {
         // call the parent function
         super.viewDidLoad()
@@ -30,7 +31,9 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         setupCaptureSession()
         view.addSubview(label)
         setupLabel()
+        
     }
+
     
     override func didReceiveMemoryWarning() {
         // call the parent function

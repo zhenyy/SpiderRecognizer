@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class LandingPage: UIViewController {
 
@@ -15,8 +16,22 @@ class LandingPage: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
-
+    @IBAction func jumpToMap(_ sender: Any) {
+        print("ageagaegfeag")
+        showSpiderMap(for: "https://zhenyy.github.io/SpiderMap/#/")
+    }
+    func showSpiderMap(for url: String){
+        guard let url = URL(string: url)else{
+            return
+        }
+        let safariVC = SFSafariViewController(url: url)
+        present(safariVC, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

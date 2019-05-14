@@ -10,19 +10,36 @@ import UIKit
 import CoreML
 import AVFoundation
 import Vision
+import CoreLocation
+import Firebase
+import FirebaseDatabase
 
-class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
+
+class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate, CLLocationManagerDelegate {
     
+    var refSpider: DatabaseReference!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var classifier: UILabel!
+    var lat:String?
+    var lng:String?
+    var spiderName:String!
     
     var model: VNCoreMLModel!
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        refSpider = Database.database().reference().child("SpiderWithLocation");
+        locationManager.requestAlwaysAuthorization()
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
         // Do any additional setup after loading the view.
     }
+    
+      //
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,6 +70,23 @@ class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         present(picker, animated: true)
     }
     
+
+    @IBAction func sendLocation(_ sender: Any) {
+        let key = refSpider.childByAutoId().key
+        let Spider = [ "id":key,
+                  "SpiderName":"St Andrew\'s Cross Spider",
+                  "SpiderLat":lat,
+                   "SpiderLng":lng]
+               refSpider.child(key!).setValue(Spider)
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        lat = locValue.latitude.description
+        lng = locValue.longitude.description
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -80,6 +114,7 @@ extension CNNUploadPhoto: UIImagePickerControllerDelegate {
             
             // create the label text components
             let predclass = "\(Observation.identifier)"
+            self.spiderName = predclass
             let predconfidence = String(format: "%.02f", Observation.confidence * 100)
             
             // set the label text
@@ -129,7 +164,6 @@ extension CNNUploadPhoto: UIImagePickerControllerDelegate {
         
         context?.translateBy(x: 0, y: newImage.size.height)
         context?.scaleBy(x: 1.0, y: -1.0)
-        
         UIGraphicsPushContext(context!)
         newImage.draw(in: CGRect(x: 0, y: 0, width: newImage.size.width, height: newImage.size.height))
         UIGraphicsPopContext()
@@ -140,5 +174,21 @@ extension CNNUploadPhoto: UIImagePickerControllerDelegate {
         // Core ML
         
         prediciton(pixelBuffer!)
+        
+        let newButton:UIButton = UIButton(frame: CGRect(x: 160, y: 600, width: 150, height: 30))
+            newButton.backgroundColor = UIColor.blue
+            newButton.setTitle("Send Spider", for: .normal)
+            newButton.addTarget(self, action: #selector(sendSpiderLocation), for: .touchUpInside)
+            self.view.addSubview(newButton)
     }
+    
+    @objc func sendSpiderLocation() {
+        let key = refSpider.childByAutoId().key
+        let Spider = [ "id":key,
+                       "SpiderName":spiderName!,
+                       "SpiderLat":lat,
+                       "SpiderLng":lng]
+                        refSpider.child(key!).setValue(Spider)
+    }
+    
 }
