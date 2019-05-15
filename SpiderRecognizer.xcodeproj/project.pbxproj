@@ -31,6 +31,7 @@
 		AE45AF2B226D82DE00EA951D /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF2A226D82DE00EA951D /* VideoCapture.swift */; };
 		AE45AF2D226D830B00EA951D /* BoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */; };
 		AE45AF2F226D836300EA951D /* MobileNetV2_SSDLite.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */; };
+		AE8281AD228BEE0800FCF8FA /* SpiderGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */; };
 		AE948C8B2264D2CB00DB6EA2 /* CNNUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE948C8A2264D2CB00DB6EA2 /* CNNUploadPhoto.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		AE45AF2A226D82DE00EA951D /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxView.swift; sourceTree = "<group>"; };
 		AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2_SSDLite.mlmodel; sourceTree = "<group>"; };
+		AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderGallery.swift; sourceTree = "<group>"; };
 		AE948C8A2264D2CB00DB6EA2 /* CNNUploadPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNUploadPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 				AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */,
 				AE45AF2A226D82DE00EA951D /* VideoCapture.swift */,
 				AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */,
+				AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */,
 			);
 			path = SpiderRecognizer;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				AE45AF2D226D830B00EA951D /* BoundingBoxView.swift in Sources */,
 				AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */,
 				182DFC91224F799600348D8B /* CNNScan.swift in Sources */,
+				AE8281AD228BEE0800FCF8FA /* SpiderGallery.swift in Sources */,
 				AE45AF29226D829C00EA951D /* RCNNScan.swift in Sources */,
 				AE948C8B2264D2CB00DB6EA2 /* CNNUploadPhoto.swift in Sources */,
 				182DFC8F224F799600348D8B /* AppDelegate.swift in Sources */,
