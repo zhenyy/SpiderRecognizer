@@ -13,7 +13,6 @@
 		182DFC96224F799900348D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC95224F799900348D8B /* Assets.xcassets */; };
 		182DFC99224F799900348D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC97224F799900348D8B /* LaunchScreen.storyboard */; };
 		182DFCA3224F830300348D8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DFCA2224F830300348D8B /* icon.png */; };
-		2708BB652283C45600FEB873 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2708BB642283C45600FEB873 /* GoogleService-Info.plist */; };
 		AE0E9588227042D100733CEF /* Red-Headed Mouse Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E957F227042CA00733CEF /* Red-Headed Mouse Spider.png */; };
 		AE0E9589227042D100733CEF /* Funnel Web Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9580227042CA00733CEF /* Funnel Web Spider.png */; };
 		AE0E958A227042D100733CEF /* Australian Tarantulas.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9581227042CA00733CEF /* Australian Tarantulas.png */; };
@@ -33,6 +32,7 @@
 		AE45AF2F226D836300EA951D /* MobileNetV2_SSDLite.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */; };
 		AE8281AD228BEE0800FCF8FA /* SpiderGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */; };
 		AE948C8B2264D2CB00DB6EA2 /* CNNUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE948C8A2264D2CB00DB6EA2 /* CNNUploadPhoto.swift */; };
+		AEEF07BD228D3A6B000C5535 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEEF07BC228D3A6B000C5535 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,6 @@
 		182DFC98224F799900348D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182DFC9A224F799900348D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182DFCA2224F830300348D8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		2708BB642283C45600FEB873 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		30369E2639470CFB894CF986 /* Pods_SpiderRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiderRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F8A1EA8A24761F9F9F39B0 /* Pods-SpiderRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderRecognizer.release.xcconfig"; path = "Target Support Files/Pods-SpiderRecognizer/Pods-SpiderRecognizer.release.xcconfig"; sourceTree = "<group>"; };
 		8E70A1F48161D7D272E3454D /* Pods-SpiderRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderRecognizer.debug.xcconfig"; path = "Target Support Files/Pods-SpiderRecognizer/Pods-SpiderRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2_SSDLite.mlmodel; sourceTree = "<group>"; };
 		AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderGallery.swift; sourceTree = "<group>"; };
 		AE948C8A2264D2CB00DB6EA2 /* CNNUploadPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNUploadPhoto.swift; sourceTree = "<group>"; };
+		AEEF07BC228D3A6B000C5535 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 		182DFC8D224F799600348D8B /* SpiderRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				2708BB642283C45600FEB873 /* GoogleService-Info.plist */,
+				AEEF07BC228D3A6B000C5535 /* GoogleService-Info.plist */,
 				AE0E957E227042CA00733CEF /* wiki images */,
 				AE33D3F422561F85003C0DA1 /* spider_vgg.mlmodel */,
 				182DFC8E224F799600348D8B /* AppDelegate.swift */,
@@ -229,7 +229,7 @@
 				AE33D3F322561F4A003C0DA1 /* Main.storyboard in Resources */,
 				AE0E958D227042D100733CEF /* Garden Orb Weaver Spider.png in Resources */,
 				AE0E9588227042D100733CEF /* Red-Headed Mouse Spider.png in Resources */,
-				2708BB652283C45600FEB873 /* GoogleService-Info.plist in Resources */,
+				AEEF07BD228D3A6B000C5535 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

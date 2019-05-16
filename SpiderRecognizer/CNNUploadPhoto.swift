@@ -23,6 +23,7 @@ class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate, CLLocati
     var lat:String?
     var lng:String?
     var spiderName:String!
+    var alert: UIAlertController!
     
     var model: VNCoreMLModel!
     let locationManager = CLLocationManager()
@@ -71,15 +72,15 @@ class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate, CLLocati
     }
     
 
-    @IBAction func sendLocation(_ sender: Any) {
-        let key = refSpider.childByAutoId().key
-        let Spider = [ "id":key,
-                  "SpiderName":"St Andrew\'s Cross Spider",
-                  "SpiderLat":lat,
-                   "SpiderLng":lng]
-               refSpider.child(key!).setValue(Spider)
-        
-    }
+//    @IBAction func sendLocation(_ sender: Any) {
+//        let key = refSpider.childByAutoId().key
+//        let Spider = [ "id":key,
+//                  "SpiderName":"St Andrew\'s Cross Spider",
+//                  "SpiderLat":lat,
+//                   "SpiderLng":lng]
+//               refSpider.child(key!).setValue(Spider)
+//
+//    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
@@ -172,14 +173,20 @@ extension CNNUploadPhoto: UIImagePickerControllerDelegate {
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
         
         // Core ML
-        
         prediciton(pixelBuffer!)
         
-        let newButton:UIButton = UIButton(frame: CGRect(x: 160, y: 600, width: 150, height: 30))
-            newButton.backgroundColor = UIColor.blue
-            newButton.setTitle("Send Spider", for: .normal)
-            newButton.addTarget(self, action: #selector(sendSpiderLocation), for: .touchUpInside)
-            self.view.addSubview(newButton)
+        // add a button allowing users to send the information of the spider to database
+        let newButton:UIButton = UIButton(type: .system)
+        newButton.frame = CGRect(x: 125, y: 590, width: 164, height: 30)
+        newButton.setTitle("Add Spider to Map", for: .normal)
+        newButton.addTarget(self, action: #selector(sendSpiderLocation), for: .touchUpInside)
+        self.view.addSubview(newButton)
+        
+        alert = UIAlertController(title: "Add Spider to Map", message: "You have successfully added the spider to Spider Map", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+            print("clicked OK")
+        }
+        alert.addAction(okAction)
     }
     
     @objc func sendSpiderLocation() {
@@ -189,6 +196,7 @@ extension CNNUploadPhoto: UIImagePickerControllerDelegate {
                        "SpiderLat":lat,
                        "SpiderLng":lng]
                         refSpider.child(key!).setValue(Spider)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

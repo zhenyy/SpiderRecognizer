@@ -25,47 +25,74 @@
                                 <rect key="frame" x="0.0" y="62" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Australian Tarantulas" image="Australian Tarantulas.png"/>
+                                <connections>
+                                    <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="aB7-aG-3hl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oe1-hR-9bh">
                                 <rect key="frame" x="138" y="62" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Daddy Long Legs Spider" image="Daddy Long Legs Spider.png"/>
+                                <connections>
+                                    <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="hgN-iA-T16"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVn-VP-7HB">
                                 <rect key="frame" x="276" y="62" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Funnel Web Spider" image="Funnel Web Spider.png"/>
+                                <connections>
+                                    <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="GUP-yk-d2T"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN4-pD-cIj">
                                 <rect key="frame" x="0.0" y="200" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Garden Orb Weaver Spider" image="Garden Orb Weaver Spider.png"/>
+                                <connections>
+                                    <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="2iK-ku-r9u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvD-El-L6x">
                                 <rect key="frame" x="138" y="200" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Huntsman Spider" image="Huntsman Spider.png"/>
+                                <connections>
+                                    <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="nFg-gR-jdh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuF-bd-KjK">
                                 <rect key="frame" x="276" y="200" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Red-Headed Mouse Spider" image="Red-Headed Mouse Spider.png"/>
+                                <connections>
+                                    <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="fbn-Rx-ijj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkB-pK-RNK">
                                 <rect key="frame" x="0.0" y="337" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Redback Spider" image="Redback Spider.png"/>
+                                <connections>
+                                    <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="oLd-FP-hkH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jke-pz-YjO">
                                 <rect key="frame" x="138" y="338" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="St Andrews Cross Spider" image="St Andrews Cross Spider.png"/>
+                                <connections>
+                                    <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="d9g-JG-Mc8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLB-eu-CcG">
                                 <rect key="frame" x="276" y="338" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="White-Tailed Spider" image="White-Tailed Spider.png"/>
+                                <connections>
+                                    <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="AY2-gp-0i0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click on the image to view introduction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBy-hG-A1o">
                                 <rect key="frame" x="20" y="484" width="374" height="232"/>
@@ -278,18 +305,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Upload Photo" id="BBF-e8-H0x">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Back" id="1Pa-tq-weN">
-                                <connections>
-                                    <segue destination="4oi-FG-6Ii" kind="presentation" id="Cs7-VF-h3j"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Send" id="iwt-tJ-oLE">
-                                <connections>
-                                    <action selector="sendLocation:" destination="0pn-65-1aZ" id="CxU-MH-Uzl"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="1Pa-tq-weN">
+                            <connections>
+                                <segue destination="4oi-FG-6Ii" kind="presentation" id="Cs7-VF-h3j"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Library" id="aFe-GH-IRC">
                                 <connections>
@@ -511,7 +531,7 @@
         <image name="White-Tailed Spider.png" width="550" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x17-Gj-Rtn"/>
+        <segue reference="Cs7-VF-h3j"/>
         <segue reference="i07-92-eKI"/>
         <segue reference="yLz-1a-X6r"/>
     </inferredMetricsTieBreakers>

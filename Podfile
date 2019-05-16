@@ -6,6 +6,6 @@ target 'SpiderRecognizer' do
   use_frameworks!
 
   # Pods for SpiderRecognizer
-  pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Core'
 end
