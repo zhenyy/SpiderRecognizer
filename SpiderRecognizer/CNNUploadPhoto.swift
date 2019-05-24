@@ -195,7 +195,7 @@ extension CNNUploadPhoto: UIImagePickerControllerDelegate {
                        "SpiderName":spiderName!,
                        "SpiderLat":lat,
                        "SpiderLng":lng]
-                        refSpider.child(key!).setValue(Spider)
+        refSpider.child(key!).setValue(Spider)
         self.present(alert, animated: true, completion: nil)
     }
     
