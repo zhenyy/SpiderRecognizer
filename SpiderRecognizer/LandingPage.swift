@@ -10,10 +10,11 @@ import UIKit
 import SafariServices
 
 class LandingPage: UIViewController {
-
+    @IBOutlet weak var basicMode: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        basicMode.backgroundColor = UIColor.darkGray
         // Do any additional setup after loading the view.
     }
     override func didReceiveMemoryWarning() {
@@ -21,7 +22,6 @@ class LandingPage: UIViewController {
     }
     
     @IBAction func jumpToMap(_ sender: Any) {
-        print("ageagaegfeag")
         showSpiderMap(for: "https://zhenyy.github.io/SpiderMap/#/")
     }
     func showSpiderMap(for url: String){

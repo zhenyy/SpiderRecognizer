@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dJN-pa-QwB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dJN-pa-QwB">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -167,15 +167,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="basicMode" destination="cCM-Vi-PSA" id="aIo-qF-ylO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GzX-HF-ofU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1708" y="117"/>
         </scene>
-        <!--Landing Page-->
+        <!--Mode-->
         <scene sceneID="26F-TO-rVb">
             <objects>
-                <viewController id="Vky-Mg-yRY" customClass="LandingPage" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vky-Mg-yRY" customClass="RCNNMode" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ipk-a1-ZIl"/>
                         <viewControllerLayoutGuide type="bottom" id="wLC-68-rLr"/>
@@ -220,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="-906" y="-619"/>
         </scene>
-        <!--Landing Page-->
+        <!--Mode-->
         <scene sceneID="3Cc-jc-vRX">
             <objects>
-                <viewController id="4oi-FG-6Ii" customClass="LandingPage" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4oi-FG-6Ii" customClass="CNNMode" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5O6-Sz-Rsn"/>
                         <viewControllerLayoutGuide type="bottom" id="A7c-Eb-AAW"/>
@@ -520,19 +523,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Australian Tarantulas.png" width="887" height="828"/>
-        <image name="Daddy Long Legs Spider.png" width="798" height="534"/>
-        <image name="Funnel Web Spider.png" width="2048" height="1533"/>
-        <image name="Garden Orb Weaver Spider.png" width="920" height="659"/>
-        <image name="Huntsman Spider.png" width="2712" height="2244"/>
-        <image name="Red-Headed Mouse Spider.png" width="800" height="599"/>
-        <image name="Redback Spider.png" width="800" height="586"/>
-        <image name="St Andrews Cross Spider.png" width="4196" height="3253"/>
-        <image name="White-Tailed Spider.png" width="550" height="400"/>
+        <image name="Australian Tarantulas.png" width="874.84930419921875" height="816.65753173828125"/>
+        <image name="Daddy Long Legs Spider.png" width="592.32989501953125" height="396.37112426757812"/>
+        <image name="Funnel Web Spider.png" width="1520.1649169921875" height="1137.8968505859375"/>
+        <image name="Garden Orb Weaver Spider.png" width="217.89472961425781" height="156.07894897460938"/>
+        <image name="Huntsman Spider.png" width="1933.306884765625" height="1599.6832275390625"/>
+        <image name="Red-Headed Mouse Spider.png" width="593.814453125" height="444.61856079101562"/>
+        <image name="Redback Spider.png" width="593.814453125" height="435"/>
+        <image name="St Andrews Cross Spider.png" width="853.4237060546875" height="661.62713623046875"/>
+        <image name="White-Tailed Spider.png" width="408.2474365234375" height="296.9072265625"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Cs7-VF-h3j"/>
+        <segue reference="x17-Gj-Rtn"/>
         <segue reference="i07-92-eKI"/>
-        <segue reference="yLz-1a-X6r"/>
+        <segue reference="jXN-Z8-adc"/>
     </inferredMetricsTieBreakers>
 </document>

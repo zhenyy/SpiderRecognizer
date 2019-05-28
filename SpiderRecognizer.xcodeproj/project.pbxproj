@@ -22,6 +22,8 @@
 		AE0E958E227042D100733CEF /* Huntsman Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9585227042CA00733CEF /* Huntsman Spider.png */; };
 		AE0E958F227042D100733CEF /* Daddy Long Legs Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9586227042CA00733CEF /* Daddy Long Legs Spider.png */; };
 		AE0E9590227042D100733CEF /* Redback Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9587227042CA00733CEF /* Redback Spider.png */; };
+		AE125E2F229D515800C67709 /* CNNMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE125E2E229D515800C67709 /* CNNMode.swift */; };
+		AE125E31229D517400C67709 /* RCNNMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE125E30229D517400C67709 /* RCNNMode.swift */; };
 		AE33D3F322561F4A003C0DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE33D3F222561F4A003C0DA1 /* Main.storyboard */; };
 		AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33D3F622562132003C0DA1 /* LandingPage.swift */; };
 		AE3F8A78226D931C0070140D /* RCNNUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F8A77226D931C0070140D /* RCNNUploadPhoto.swift */; };
@@ -55,6 +57,8 @@
 		AE0E9585227042CA00733CEF /* Huntsman Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Huntsman Spider.png"; sourceTree = "<group>"; };
 		AE0E9586227042CA00733CEF /* Daddy Long Legs Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Daddy Long Legs Spider.png"; sourceTree = "<group>"; };
 		AE0E9587227042CA00733CEF /* Redback Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Redback Spider.png"; sourceTree = "<group>"; };
+		AE125E2E229D515800C67709 /* CNNMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNMode.swift; sourceTree = "<group>"; };
+		AE125E30229D517400C67709 /* RCNNMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCNNMode.swift; sourceTree = "<group>"; };
 		AE33D3F222561F4A003C0DA1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AE33D3F622562132003C0DA1 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 		AE3F8A77226D931C0070140D /* RCNNUploadPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCNNUploadPhoto.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				AE45AF2A226D82DE00EA951D /* VideoCapture.swift */,
 				AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */,
 				AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */,
+				AE125E2E229D515800C67709 /* CNNMode.swift */,
+				AE125E30229D517400C67709 /* RCNNMode.swift */,
 			);
 			path = SpiderRecognizer;
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 				AE3F8A78226D931C0070140D /* RCNNUploadPhoto.swift in Sources */,
 				AE45AF2B226D82DE00EA951D /* VideoCapture.swift in Sources */,
 				AE45AF2D226D830B00EA951D /* BoundingBoxView.swift in Sources */,
+				AE125E2F229D515800C67709 /* CNNMode.swift in Sources */,
 				AE680641229CFD1600D7C335 /* spider_vgg.mlmodel in Sources */,
+				AE125E31229D517400C67709 /* RCNNMode.swift in Sources */,
 				AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */,
 				182DFC91224F799600348D8B /* CNNScan.swift in Sources */,
 				AE8281AD228BEE0800FCF8FA /* SpiderGallery.swift in Sources */,
