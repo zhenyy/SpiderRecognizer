@@ -9,11 +9,21 @@
 import UIKit
 
 class RCNNMode: UIViewController {
-
+    @IBOutlet weak var scan: UIButton!
+    @IBOutlet weak var uploadPhoto: UIButton!
+    
+    let HeadColor = UIColor(red: 73/255, green: 82/255, blue: 99/255, alpha: 1)
+    let bottomColor = UIColor(red: 31/255, green: 40/255, blue: 57/255, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.view.setGradientBackground(colorOne: HeadColor, colorTwo: bottomColor)
+        // set the background gradient color for the landing page
+        
+        scan.setTitleColor(UIColor.white, for: .normal)
+        uploadPhoto.setTitleColor(UIColor.white, for: .normal)
+        // set customized feature for the first button
     }
     
 

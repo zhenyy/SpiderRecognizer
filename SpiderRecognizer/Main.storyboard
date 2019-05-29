@@ -202,16 +202,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bie-ds-VIq">
-                                <rect key="frame" x="189.66666666666666" y="261" width="35" height="30"/>
-                                <state key="normal" title="Scan"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bie-ds-VIq">
+                                <rect key="frame" x="52" y="366" width="311" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan" backgroundImage="BottonBackgroundColor.png"/>
                                 <connections>
                                     <segue destination="aug-PT-4wr" kind="presentation" id="rRM-C9-UJY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqB-Pr-O4c">
-                                <rect key="frame" x="154.66666666666666" y="353" width="104.99999999999997" height="30"/>
-                                <state key="normal" title="Upload a photo"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqB-Pr-O4c">
+                                <rect key="frame" x="52" y="448" width="311" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload a photo" backgroundImage="BottonBackgroundColor.png"/>
                                 <connections>
                                     <segue destination="ch5-ec-SBV" kind="presentation" id="Z3V-hV-gtU"/>
                                 </connections>
@@ -219,24 +221,35 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMe-FG-HY7">
                                 <rect key="frame" x="26" y="28" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="dJN-pa-QwB" kind="presentation" id="KAD-3O-Bg8"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Recognize multiple spiders" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zih-ro-KZo">
+                                <rect key="frame" x="110" y="207" width="209" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Team Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="KH0-pk-xko">
+                                <rect key="frame" x="87" y="71" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bie-ds-VIq" firstAttribute="centerX" secondItem="OqF-oC-cUK" secondAttribute="centerX" id="3V3-fz-YRW"/>
-                            <constraint firstItem="lqB-Pr-O4c" firstAttribute="top" secondItem="bie-ds-VIq" secondAttribute="bottom" constant="62" id="43p-Yf-Fds"/>
-                            <constraint firstItem="bie-ds-VIq" firstAttribute="top" secondItem="Ipk-a1-ZIl" secondAttribute="bottom" constant="241" id="HIW-sL-NEO"/>
-                            <constraint firstItem="bie-ds-VIq" firstAttribute="centerX" secondItem="lqB-Pr-O4c" secondAttribute="centerX" id="sZ1-fQ-ohL"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scan" destination="bie-ds-VIq" id="Bzn-b7-vYS"/>
+                        <outlet property="uploadPhoth" destination="lqB-Pr-O4c" id="PrB-jR-fD9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewk-mY-oWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-906" y="-619"/>
+            <point key="canvasLocation" x="-907.24637681159425" y="-619.56521739130437"/>
         </scene>
         <!--Mode-->
         <scene sceneID="3Cc-jc-vRX">
@@ -250,16 +263,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-PW-3Gn">
-                                <rect key="frame" x="189.66666666666666" y="269" width="35" height="30"/>
-                                <state key="normal" title="Scan"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-PW-3Gn">
+                                <rect key="frame" x="52" y="366" width="311" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan" backgroundImage="BottonBackgroundColor.png"/>
                                 <connections>
                                     <segue destination="m1i-KI-sai" kind="presentation" id="9bn-Ss-kTK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl3-0d-Zq7">
-                                <rect key="frame" x="154.66666666666666" y="337" width="104.99999999999997" height="30"/>
-                                <state key="normal" title="Upload a photo"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl3-0d-Zq7">
+                                <rect key="frame" x="52" y="448" width="311" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload a photo" backgroundImage="BottonBackgroundColor.png"/>
                                 <connections>
                                     <segue destination="FLG-hG-oMR" kind="presentation" id="3EK-Xo-Di4"/>
                                 </connections>
@@ -267,24 +282,35 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMF-az-lGp">
                                 <rect key="frame" x="26" y="28" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="dJN-pa-QwB" kind="presentation" id="jXN-Z8-adc"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Team Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Ya-l5-mpc">
+                                <rect key="frame" x="87" y="71" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Recognize a single spider" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fge-jL-7NZ">
+                                <rect key="frame" x="117" y="207" width="200" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Vhk-PW-3Gn" firstAttribute="centerX" secondItem="Xgv-m6-Fyg" secondAttribute="centerX" id="Cvj-Wq-rZX"/>
-                            <constraint firstItem="Wl3-0d-Zq7" firstAttribute="top" secondItem="Vhk-PW-3Gn" secondAttribute="bottom" constant="38" id="Z9n-YC-8SR"/>
-                            <constraint firstItem="Vhk-PW-3Gn" firstAttribute="centerX" secondItem="Wl3-0d-Zq7" secondAttribute="centerX" id="ZoP-2Y-6UY"/>
-                            <constraint firstItem="Vhk-PW-3Gn" firstAttribute="top" secondItem="5O6-Sz-Rsn" secondAttribute="bottom" constant="249" id="pnp-NH-A9m"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scan" destination="Vhk-PW-3Gn" id="JQ0-j3-xoA"/>
+                        <outlet property="uploadPhoto" destination="Wl3-0d-Zq7" id="X3F-X9-P8n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVR-8U-kp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-906" y="118"/>
+            <point key="canvasLocation" x="-907.24637681159425" y="117.39130434782609"/>
         </scene>
         <!--Upload Photo-->
         <scene sceneID="dfH-GY-LIB">
@@ -553,6 +579,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="x17-Gj-Rtn"/>
         <segue reference="i07-92-eKI"/>
-        <segue reference="jXN-Z8-adc"/>
+        <segue reference="KAD-3O-Bg8"/>
     </inferredMetricsTieBreakers>
 </document>
