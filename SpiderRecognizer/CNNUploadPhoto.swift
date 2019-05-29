@@ -162,6 +162,9 @@ extension CNNUploadPhoto: UIImagePickerControllerDelegate {
         let newButton:UIButton = UIButton(type: .system)
         newButton.frame = CGRect(x: 125, y: 590, width: 164, height: 30)
         newButton.setTitle("Add Spider to Map", for: .normal)
+        newButton.setTitleColor(UIColor.white, for: .normal)
+        newButton.backgroundColor = UIColor.darkGray
+        newButton.layer.cornerRadius = newButton.frame.height/2
         newButton.addTarget(self, action: #selector(sendSpiderLocation), for: .touchUpInside)
         self.view.addSubview(newButton)
         
