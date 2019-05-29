@@ -19,7 +19,7 @@ class RCNNMode: UIViewController {
         super.viewDidLoad()
         
         self.view.setGradientBackground(colorOne: HeadColor, colorTwo: bottomColor)
-        // set the background gradient color for the landing page
+        //set the background gradient color for the landing page
         
         scan.setTitleColor(UIColor.white, for: .normal)
         uploadPhoto.setTitleColor(UIColor.white, for: .normal)

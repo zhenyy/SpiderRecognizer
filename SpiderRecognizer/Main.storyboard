@@ -180,9 +180,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="AdvancedMode" destination="zDa-8N-IQa" id="ssE-H6-Z8T"/>
                         <outlet property="SpiderGallery" destination="BVs-WQ-GOU" id="sX6-6G-mTY"/>
                         <outlet property="SpiderMap" destination="uLQ-pg-xEM" id="NQK-SB-9EO"/>
+                        <outlet property="advancedMode" destination="zDa-8N-IQa" id="UPs-fL-YeS"/>
                         <outlet property="basicMode" destination="cCM-Vi-PSA" id="aIo-qF-ylO"/>
                     </connections>
                 </viewController>
@@ -243,8 +243,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="scan" destination="bie-ds-VIq" id="Bzn-b7-vYS"/>
-                        <outlet property="uploadPhoth" destination="lqB-Pr-O4c" id="PrB-jR-fD9"/>
+                        <outlet property="scan" destination="bie-ds-VIq" id="TvI-gG-h8K"/>
+                        <outlet property="uploadPhoto" destination="lqB-Pr-O4c" id="5Yn-to-LCY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewk-mY-oWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,7 +564,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BottonBackgroundColor.png" width="384" height="68"/>
+        <image name="BottonBackgroundColor.png" width="230.39999389648438" height="40.799999237060547"/>
         <image name="Daddy Long Legs Spider.png" width="592.32989501953125" height="396.37112426757812"/>
         <image name="Funnel-Web Spider.png" width="922" height="690"/>
         <image name="Garden Orb Weaver Spider.png" width="217.89472961425781" height="156.07894897460938"/>
@@ -573,7 +573,7 @@
         <image name="Redback Spider.png" width="593.814453125" height="435"/>
         <image name="St Andrews Cross Spider.png" width="839" height="650"/>
         <image name="Tarantula Spider.png" width="874.84930419921875" height="816.65753173828125"/>
-        <image name="Team Logo.png" width="497" height="503"/>
+        <image name="Team Logo.png" width="298.20001220703125" height="301.79998779296875"/>
         <image name="White-Tailed Spider.png" width="970" height="612"/>
     </resources>
     <inferredMetricsTieBreakers>
