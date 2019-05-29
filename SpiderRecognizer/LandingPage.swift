@@ -15,7 +15,6 @@ class LandingPage: UIViewController {
     @IBOutlet weak var spiderGallery: UIButton!
     @IBOutlet weak var spiderMap: UIButton!
     
-    
     let HeadColor = UIColor(red: 73/255, green: 82/255, blue: 99/255, alpha: 1)
     let bottomColor = UIColor(red: 31/255, green: 40/255, blue: 57/255, alpha: 1)
     
@@ -29,9 +28,7 @@ class LandingPage: UIViewController {
         spiderGallery.setTitleColor(UIColor.white, for: .normal)
         spiderMap.setTitleColor(UIColor.white, for: .normal)
         // set customized feature for the first button
-        
-        
-        // Do any additional setup after loading the view.
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
