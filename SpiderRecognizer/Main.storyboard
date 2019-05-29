@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dJN-pa-QwB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dJN-pa-QwB">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -133,33 +133,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCM-Vi-PSA">
-                                <rect key="frame" x="167" y="210" width="80" height="30"/>
+                                <rect key="frame" x="52" y="283" width="311" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Basic Mode"/>
+                                <state key="normal" title="Basic Mode" backgroundImage="BottonBackgroundColor.png"/>
                                 <connections>
                                     <segue destination="4oi-FG-6Ii" kind="presentation" id="x17-Gj-Rtn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDa-8N-IQa">
-                                <rect key="frame" x="152" y="282" width="110.99999999999997" height="30"/>
+                                <rect key="frame" x="52" y="366" width="311" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Advanced Mode"/>
+                                <state key="normal" title="Advanced Mode" backgroundImage="BottonBackgroundColor.png"/>
                                 <connections>
                                     <segue destination="Vky-Mg-yRY" kind="presentation" id="i07-92-eKI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVs-WQ-GOU">
-                                <rect key="frame" x="159" y="353" width="97" height="30"/>
+                                <rect key="frame" x="52" y="448" width="311" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Spider Gallery"/>
+                                <state key="normal" title="Spider Gallery" backgroundImage="BottonBackgroundColor.png"/>
                                 <connections>
                                     <segue destination="oQo-JU-C61" kind="presentation" id="eQw-OF-Cwd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLQ-pg-xEM">
-                                <rect key="frame" x="168" y="423" width="79" height="30"/>
+                                <rect key="frame" x="52" y="531" width="311" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Spider Map"/>
+                                <state key="normal" title="Spider Map" backgroundImage="BottonBackgroundColor.png"/>
                                 <connections>
                                     <action selector="jumpToMap:" destination="dJN-pa-QwB" eventType="touchUpInside" id="8dI-Sj-ao6"/>
                                 </connections>
@@ -168,12 +168,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="AdvancedMode" destination="zDa-8N-IQa" id="ssE-H6-Z8T"/>
+                        <outlet property="SpiderGallery" destination="BVs-WQ-GOU" id="sX6-6G-mTY"/>
+                        <outlet property="SpiderMap" destination="uLQ-pg-xEM" id="NQK-SB-9EO"/>
                         <outlet property="basicMode" destination="cCM-Vi-PSA" id="aIo-qF-ylO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GzX-HF-ofU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1708" y="117"/>
+            <point key="canvasLocation" x="-1708.6956521739132" y="116.57608695652175"/>
         </scene>
         <!--Mode-->
         <scene sceneID="26F-TO-rVb">
@@ -523,19 +526,20 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Daddy Long Legs Spider.png" width="798" height="534"/>
+        <image name="BottonBackgroundColor.png" width="384" height="68"/>
+        <image name="Daddy Long Legs Spider.png" width="592.32989501953125" height="396.37112426757812"/>
         <image name="Funnel-Web Spider.png" width="922" height="690"/>
-        <image name="Garden Orb Weaver Spider.png" width="920" height="659"/>
+        <image name="Garden Orb Weaver Spider.png" width="217.89472961425781" height="156.07894897460938"/>
         <image name="Huntsman Spider.png" width="814" height="674"/>
-        <image name="Red-Headed Mouse Spider.png" width="800" height="599"/>
-        <image name="Redback Spider.png" width="800" height="586"/>
+        <image name="Red-Headed Mouse Spider.png" width="593.814453125" height="444.61856079101562"/>
+        <image name="Redback Spider.png" width="593.814453125" height="435"/>
         <image name="St Andrews Cross Spider.png" width="839" height="650"/>
-        <image name="Tarantula Spider.png" width="887" height="828"/>
+        <image name="Tarantula Spider.png" width="874.84930419921875" height="816.65753173828125"/>
         <image name="White-Tailed Spider.png" width="970" height="612"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="x17-Gj-Rtn"/>
         <segue reference="i07-92-eKI"/>
-        <segue reference="yLz-1a-X6r"/>
+        <segue reference="jXN-Z8-adc"/>
     </inferredMetricsTieBreakers>
 </document>
