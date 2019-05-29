@@ -13,9 +13,10 @@
 		182DFC96224F799900348D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC95224F799900348D8B /* Assets.xcassets */; };
 		182DFC99224F799900348D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC97224F799900348D8B /* LaunchScreen.storyboard */; };
 		182DFCA3224F830300348D8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DFCA2224F830300348D8B /* icon.png */; };
+		18CC1DC8229E3FD900AD545B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC1DC7229E3FD900AD545B /* Constant.swift */; };
 		AE0E9588227042D100733CEF /* Red-Headed Mouse Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E957F227042CA00733CEF /* Red-Headed Mouse Spider.png */; };
-		AE0E9589227042D100733CEF /* Funnel Web Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9580227042CA00733CEF /* Funnel Web Spider.png */; };
-		AE0E958A227042D100733CEF /* Australian Tarantulas.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9581227042CA00733CEF /* Australian Tarantulas.png */; };
+		AE0E9589227042D100733CEF /* Funnel-Web Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9580227042CA00733CEF /* Funnel-Web Spider.png */; };
+		AE0E958A227042D100733CEF /* Tarantula Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9581227042CA00733CEF /* Tarantula Spider.png */; };
 		AE0E958B227042D100733CEF /* St Andrews Cross Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9582227042CA00733CEF /* St Andrews Cross Spider.png */; };
 		AE0E958C227042D100733CEF /* White-Tailed Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9583227042CA00733CEF /* White-Tailed Spider.png */; };
 		AE0E958D227042D100733CEF /* Garden Orb Weaver Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9584227042CA00733CEF /* Garden Orb Weaver Spider.png */; };
@@ -45,12 +46,13 @@
 		182DFC98224F799900348D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182DFC9A224F799900348D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182DFCA2224F830300348D8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		18CC1DC7229E3FD900AD545B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		30369E2639470CFB894CF986 /* Pods_SpiderRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiderRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F8A1EA8A24761F9F9F39B0 /* Pods-SpiderRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderRecognizer.release.xcconfig"; path = "Target Support Files/Pods-SpiderRecognizer/Pods-SpiderRecognizer.release.xcconfig"; sourceTree = "<group>"; };
 		8E70A1F48161D7D272E3454D /* Pods-SpiderRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderRecognizer.debug.xcconfig"; path = "Target Support Files/Pods-SpiderRecognizer/Pods-SpiderRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0E957F227042CA00733CEF /* Red-Headed Mouse Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red-Headed Mouse Spider.png"; sourceTree = "<group>"; };
-		AE0E9580227042CA00733CEF /* Funnel Web Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Funnel Web Spider.png"; sourceTree = "<group>"; };
-		AE0E9581227042CA00733CEF /* Australian Tarantulas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Australian Tarantulas.png"; sourceTree = "<group>"; };
+		AE0E9580227042CA00733CEF /* Funnel-Web Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Funnel-Web Spider.png"; sourceTree = "<group>"; };
+		AE0E9581227042CA00733CEF /* Tarantula Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tarantula Spider.png"; sourceTree = "<group>"; };
 		AE0E9582227042CA00733CEF /* St Andrews Cross Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "St Andrews Cross Spider.png"; sourceTree = "<group>"; };
 		AE0E9583227042CA00733CEF /* White-Tailed Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "White-Tailed Spider.png"; sourceTree = "<group>"; };
 		AE0E9584227042CA00733CEF /* Garden Orb Weaver Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Garden Orb Weaver Spider.png"; sourceTree = "<group>"; };
@@ -105,24 +107,25 @@
 		182DFC8D224F799600348D8B /* SpiderRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				AE680640229CFD1600D7C335 /* spider_vgg.mlmodel */,
-				AEEF07BC228D3A6B000C5535 /* GoogleService-Info.plist */,
 				AE0E957E227042CA00733CEF /* wiki images */,
-				182DFC8E224F799600348D8B /* AppDelegate.swift */,
-				182DFC90224F799600348D8B /* CNNScan.swift */,
+				AE680640229CFD1600D7C335 /* spider_vgg.mlmodel */,
+				AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */,
 				182DFC95224F799900348D8B /* Assets.xcassets */,
-				182DFC97224F799900348D8B /* LaunchScreen.storyboard */,
+				AEEF07BC228D3A6B000C5535 /* GoogleService-Info.plist */,
 				182DFC9A224F799900348D8B /* Info.plist */,
-				182DFCA2224F830300348D8B /* icon.png */,
+				182DFC97224F799900348D8B /* LaunchScreen.storyboard */,
 				AE33D3F222561F4A003C0DA1 /* Main.storyboard */,
-				AE3F8A77226D931C0070140D /* RCNNUploadPhoto.swift */,
+				182DFCA2224F830300348D8B /* icon.png */,
+				18CC1DC7229E3FD900AD545B /* Constant.swift */,
+				182DFC8E224F799600348D8B /* AppDelegate.swift */,
 				AE33D3F622562132003C0DA1 /* LandingPage.swift */,
+				AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */,
+				182DFC90224F799600348D8B /* CNNScan.swift */,
 				AE948C8A2264D2CB00DB6EA2 /* CNNUploadPhoto.swift */,
 				AE45AF28226D829C00EA951D /* RCNNScan.swift */,
-				AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */,
+				AE3F8A77226D931C0070140D /* RCNNUploadPhoto.swift */,
 				AE45AF2A226D82DE00EA951D /* VideoCapture.swift */,
 				AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */,
-				AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */,
 				AE125E2E229D515800C67709 /* CNNMode.swift */,
 				AE125E30229D517400C67709 /* RCNNMode.swift */,
 			);
@@ -150,8 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				AE0E957F227042CA00733CEF /* Red-Headed Mouse Spider.png */,
-				AE0E9580227042CA00733CEF /* Funnel Web Spider.png */,
-				AE0E9581227042CA00733CEF /* Australian Tarantulas.png */,
+				AE0E9580227042CA00733CEF /* Funnel-Web Spider.png */,
+				AE0E9581227042CA00733CEF /* Tarantula Spider.png */,
 				AE0E9582227042CA00733CEF /* St Andrews Cross Spider.png */,
 				AE0E9583227042CA00733CEF /* White-Tailed Spider.png */,
 				AE0E9584227042CA00733CEF /* Garden Orb Weaver Spider.png */,
@@ -223,10 +226,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				182DFC99224F799900348D8B /* LaunchScreen.storyboard in Resources */,
-				AE0E9589227042D100733CEF /* Funnel Web Spider.png in Resources */,
+				AE0E9589227042D100733CEF /* Funnel-Web Spider.png in Resources */,
 				AE0E958B227042D100733CEF /* St Andrews Cross Spider.png in Resources */,
 				182DFC96224F799900348D8B /* Assets.xcassets in Resources */,
-				AE0E958A227042D100733CEF /* Australian Tarantulas.png in Resources */,
+				AE0E958A227042D100733CEF /* Tarantula Spider.png in Resources */,
 				AE0E9590227042D100733CEF /* Redback Spider.png in Resources */,
 				AE0E958F227042D100733CEF /* Daddy Long Legs Spider.png in Resources */,
 				182DFCA3224F830300348D8B /* icon.png in Resources */,
@@ -304,6 +307,7 @@
 				AE125E2F229D515800C67709 /* CNNMode.swift in Sources */,
 				AE680641229CFD1600D7C335 /* spider_vgg.mlmodel in Sources */,
 				AE125E31229D517400C67709 /* RCNNMode.swift in Sources */,
+				18CC1DC8229E3FD900AD545B /* Constant.swift in Sources */,
 				AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */,
 				182DFC91224F799600348D8B /* CNNScan.swift in Sources */,
 				AE8281AD228BEE0800FCF8FA /* SpiderGallery.swift in Sources */,
@@ -449,14 +453,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PWJ9329DU2;
+				DEVELOPMENT_TEAM = 52XL6NRZ66;
 				INFOPLIST_FILE = SpiderRecognizer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.zhenyy.github.SpiderRecognizer1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.SpiderRecognizer1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -469,14 +473,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PWJ9329DU2;
+				DEVELOPMENT_TEAM = 52XL6NRZ66;
 				INFOPLIST_FILE = SpiderRecognizer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.zhenyy.github.SpiderRecognizer1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.SpiderRecognizer1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

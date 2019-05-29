@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dJN-pa-QwB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dJN-pa-QwB">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,7 +24,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-Cm-cJf">
                                 <rect key="frame" x="0.0" y="62" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Australian Tarantulas" image="Australian Tarantulas.png"/>
+                                <state key="normal" title="Tarantula Spider" image="Tarantula Spider.png"/>
                                 <connections>
                                     <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="aB7-aG-3hl"/>
                                 </connections>
@@ -40,7 +40,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVn-VP-7HB">
                                 <rect key="frame" x="276" y="62" width="138" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Funnel Web Spider" image="Funnel Web Spider.png"/>
+                                <state key="normal" title="Funnel-Web Spider" image="Funnel-Web Spider.png"/>
                                 <connections>
                                     <action selector="spiderSelected:" destination="oQo-JU-C61" eventType="touchUpInside" id="GUP-yk-d2T"/>
                                 </connections>
@@ -523,19 +523,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Australian Tarantulas.png" width="874.84930419921875" height="816.65753173828125"/>
-        <image name="Daddy Long Legs Spider.png" width="592.32989501953125" height="396.37112426757812"/>
-        <image name="Funnel Web Spider.png" width="1520.1649169921875" height="1137.8968505859375"/>
-        <image name="Garden Orb Weaver Spider.png" width="217.89472961425781" height="156.07894897460938"/>
-        <image name="Huntsman Spider.png" width="1933.306884765625" height="1599.6832275390625"/>
-        <image name="Red-Headed Mouse Spider.png" width="593.814453125" height="444.61856079101562"/>
-        <image name="Redback Spider.png" width="593.814453125" height="435"/>
-        <image name="St Andrews Cross Spider.png" width="853.4237060546875" height="661.62713623046875"/>
-        <image name="White-Tailed Spider.png" width="408.2474365234375" height="296.9072265625"/>
+        <image name="Daddy Long Legs Spider.png" width="798" height="534"/>
+        <image name="Funnel-Web Spider.png" width="922" height="690"/>
+        <image name="Garden Orb Weaver Spider.png" width="920" height="659"/>
+        <image name="Huntsman Spider.png" width="814" height="674"/>
+        <image name="Red-Headed Mouse Spider.png" width="800" height="599"/>
+        <image name="Redback Spider.png" width="800" height="586"/>
+        <image name="St Andrews Cross Spider.png" width="839" height="650"/>
+        <image name="Tarantula Spider.png" width="887" height="828"/>
+        <image name="White-Tailed Spider.png" width="970" height="612"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="x17-Gj-Rtn"/>
         <segue reference="i07-92-eKI"/>
-        <segue reference="jXN-Z8-adc"/>
+        <segue reference="yLz-1a-X6r"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,7 @@ import UIKit
 import AVFoundation
 import Vision
 
+
 class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     // create a label to hold the spider name and confidence
     let label: UILabel = {
@@ -19,8 +20,18 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Label"
         label.font = label.font.withSize(15)
+        label.numberOfLines = 0
         return label
     }()
+    
+    
+    func setupLabel() {
+        // constrain the label in the center
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        // constrain the the label to 50 pixels from the bottom
+        label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
+    }
     
     
     override func viewDidLoad() {
@@ -38,9 +49,10 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     override func didReceiveMemoryWarning() {
         // call the parent function
         super.didReceiveMemoryWarning()
-
+        
         // Dispose of any resources that can be recreated.
     }
+    
     
     func setupCaptureSession() {
         // create a new capture session
@@ -71,6 +83,7 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         captureSession.startRunning()
     }
     
+    
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         // load our CoreML model
         guard let model = try? VNCoreMLModel(for: spider_vgg().model) else { return }
@@ -87,10 +100,13 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
             // create the label text components
             let predclass = "\(Observation.identifier)"
             let predconfidence = String(format: "%.02f", Observation.confidence * 100)
+            let toxicity = ConstantsEnum.spiderMapping[predclass]!
             
             // set the label text
             DispatchQueue.main.async(execute: {
-                self.label.text = "\(predclass) \(predconfidence)%"
+                self.label.textColor = ConstantsEnum.colorMapping[toxicity]!
+                self.label.text = "\(predclass) \(predconfidence)%\n" +
+                                  "Hazard Level: \(toxicity)"
             })
         }
         
@@ -103,11 +119,4 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
     
-    func setupLabel() {
-        // constrain the label in the center
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        // constrain the the label to 50 pixels from the bottom
-        label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
-    }
 }

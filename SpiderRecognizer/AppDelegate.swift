@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SpiderRecognizer
 //
-//  Created by Benny on 30/3/19.
+//  Created by DonghanYang on 30/3/19.
 //  Copyright © 2019 DonghanYang. All rights reserved.
 //
 

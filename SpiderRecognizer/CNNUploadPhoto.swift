@@ -40,7 +40,6 @@ class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate, CLLocati
         // Do any additional setup after loading the view.
     }
     
-      //
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -71,16 +70,6 @@ class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate, CLLocati
         present(picker, animated: true)
     }
     
-
-//    @IBAction func sendLocation(_ sender: Any) {
-//        let key = refSpider.childByAutoId().key
-//        let Spider = [ "id":key,
-//                  "SpiderName":"St Andrew\'s Cross Spider",
-//                  "SpiderLat":lat,
-//                   "SpiderLng":lng]
-//               refSpider.child(key!).setValue(Spider)
-//
-//    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
@@ -88,15 +77,6 @@ class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate, CLLocati
         lng = locValue.longitude.description
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -117,10 +97,13 @@ extension CNNUploadPhoto: UIImagePickerControllerDelegate {
             let predclass = "\(Observation.identifier)"
             self.spiderName = predclass
             let predconfidence = String(format: "%.02f", Observation.confidence * 100)
+            let toxicity = ConstantsEnum.spiderMapping[predclass]!
             
             // set the label text
             DispatchQueue.main.async(execute: {
-                self.classifier.text = "\(predclass) \(predconfidence)%"
+                self.classifier.textColor = ConstantsEnum.colorMapping[toxicity]!
+                self.classifier.text = "\(predclass) \(predconfidence)%\n" +
+                                       "Hazard Level: \(toxicity)"
             })
         }
         
@@ -143,7 +126,7 @@ extension CNNUploadPhoto: UIImagePickerControllerDelegate {
         classifier.text = "Analyzing Image..."
         guard let image = info["UIImagePickerControllerOriginalImage"] as? UIImage else {
             return
-        } //1
+        }
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 299, height: 299), true, 2.0)
         image.draw(in: CGRect(x: 0, y: 0, width: 299, height: 299))
