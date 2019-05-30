@@ -15,6 +15,7 @@ import CoreMedia
 
 class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
     
+    @IBOutlet weak var tips: UILabel!
     @IBOutlet weak var imageView: UIImageView!
 //    @IBOutlet weak var classifier: UILabel!
     
@@ -83,6 +84,7 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
     }
     
     func predict(pixelBuffer: CVPixelBuffer) {
+        tips.text = ""
         if currentBuffer == nil {
             currentBuffer = pixelBuffer
             let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .up, options: [:])
