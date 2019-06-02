@@ -28,6 +28,7 @@ class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate, CLLocati
     var model: VNCoreMLModel!
     let locationManager = CLLocationManager()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         refSpider = Database.database().reference().child("SpiderWithLocation");
@@ -46,7 +47,7 @@ class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate, CLLocati
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        model = try? VNCoreMLModel(for: spider_vgg().model)
+        model = try? VNCoreMLModel(for: ConstantsEnum.imageClassifier)
     }
     
     @IBAction func camera(_ sender: Any) {
@@ -75,7 +76,6 @@ class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate, CLLocati
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         lat = locValue.latitude.description
         lng = locValue.longitude.description
-        
     }
 
 }

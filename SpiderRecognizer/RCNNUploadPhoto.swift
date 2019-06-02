@@ -17,15 +17,12 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var tips: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-//    @IBOutlet weak var classifier: UILabel!
-    
+
     var currentBuffer: CVPixelBuffer?
-    
-    let coreMLModel = MobileNetV2_SSDLite()
     
     lazy var visionModel: VNCoreMLModel = {
         do {
-            return try VNCoreMLModel(for: coreMLModel.model)
+            return try VNCoreMLModel(for: ConstantsEnum.objectDetector)
         } catch {
             fatalError("Failed to create VNCoreMLModel: \(error)")
         }
@@ -60,7 +57,7 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         }
         
         // The label names are stored inside the MLModel's metadata.
-        guard let userDefined = coreMLModel.model.modelDescription.metadata[MLModelMetadataKey.creatorDefinedKey] as? [String: String],
+        guard let userDefined = ConstantsEnum.objectDetector.modelDescription.metadata[MLModelMetadataKey.creatorDefinedKey] as? [String: String],
             let allLabels = userDefined["classes"] else {
                 fatalError("Missing metadata")
         }

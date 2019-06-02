@@ -13,6 +13,7 @@ import Vision
 
 
 class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
     // create a label to hold the spider name and confidence
     let label: UILabel = {
         let label = UILabel()
@@ -86,7 +87,7 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         // load our CoreML model
-        guard let model = try? VNCoreMLModel(for: spider_vgg().model) else { return }
+        guard let model = try? VNCoreMLModel(for: ConstantsEnum.imageClassifier) else { return }
         
         // run an inference with CoreML
         let request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
