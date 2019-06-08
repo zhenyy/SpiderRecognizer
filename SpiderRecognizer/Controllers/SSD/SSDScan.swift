@@ -24,7 +24,7 @@ class SSDScan: UIViewController {
     var videoCapture: VideoCapture!
     var currentBuffer: CVPixelBuffer?
     
-    // create Core ML model using the object detector model provided
+    // create VNCoreMLModel instance using the object detector model provided
     lazy var visionModel: VNCoreMLModel = {
         do {
             return try VNCoreMLModel(for: ConstantsEnum.objectDetector)
@@ -33,6 +33,12 @@ class SSDScan: UIViewController {
         }
     }()
     
+    /**
+     run an inference with Core ML
+     - Inside the completion handler for the VNCoreMLRequest we will get the results as an array of VNRecognizedObjectObservation objects.
+     - There is one such object for every detected object in the image.
+     - The observation object contains a property labels with the classification scores for the class labels, and a property boundingBox with the coordinates of the bounding box rectangle.
+    */
     lazy var visionRequest: VNCoreMLRequest = {
         let request = VNCoreMLRequest(model: visionModel, completionHandler: {
             [weak self] request, error in
@@ -128,6 +134,7 @@ class SSDScan: UIViewController {
                 options[.cameraIntrinsics] = cameraIntrinsicMatrix
             }
             
+            // execute the request
             let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .up, options: options)
             do {
                 try handler.perform([self.visionRequest])
@@ -140,7 +147,8 @@ class SSDScan: UIViewController {
     }
     
     /**
-     Process observations and bind the result of prediction on it
+     Create the VNCoreMLRequest object,
+     process observations and bind the result of prediction on it
      - parameter request: request for prediction
      - parameter error: error occurs during prediction
      */

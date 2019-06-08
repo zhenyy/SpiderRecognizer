@@ -23,7 +23,7 @@ class SSDUploadPhoto: UIViewController, UINavigationControllerDelegate {
 
     var currentBuffer: CVPixelBuffer?
     
-    // set up the object detector provided
+    // create VNCoreMLModel instance using the object detector model provided
     lazy var visionModel: VNCoreMLModel = {
         do {
             return try VNCoreMLModel(for: ConstantsEnum.objectDetector)
@@ -32,7 +32,12 @@ class SSDUploadPhoto: UIViewController, UINavigationControllerDelegate {
         }
     }()
     
-    // set up the vision request with the object detector provided
+    /**
+     run an inference with Core ML
+     - Inside the completion handler for the VNCoreMLRequest we will get the results as an array of VNRecognizedObjectObservation objects.
+     - There is one such object for every detected object in the image.
+     - The observation object contains a property labels with the classification scores for the class labels, and a property boundingBox with the coordinates of the bounding box rectangle.
+     */
     lazy var visionRequest: VNCoreMLRequest = {
         let request = VNCoreMLRequest(model: visionModel, completionHandler: {
             [weak self] request, error in
@@ -94,6 +99,7 @@ class SSDUploadPhoto: UIViewController, UINavigationControllerDelegate {
         tips.text = ""
         if currentBuffer == nil {
             currentBuffer = pixelBuffer
+            // execute the request
             let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .up, options: [:])
             do {
                 try handler.perform([self.visionRequest])
@@ -104,7 +110,12 @@ class SSDUploadPhoto: UIViewController, UINavigationControllerDelegate {
         }
     }
     
-    // process the observations
+    /**
+     Create the VNCoreMLRequest object,
+     process observations and bind the result of prediction on it
+     - parameter request: request for prediction
+     - parameter error: error occurs during prediction
+     */
     func processObservations(for request: VNRequest, error: Error?) {
         DispatchQueue.main.async {
             if let results = request.results as? [VNRecognizedObjectObservation] {
@@ -147,7 +158,7 @@ class SSDUploadPhoto: UIViewController, UINavigationControllerDelegate {
                 let bestClass = prediction.labels[0].identifier
                 let confidence = prediction.labels[0].confidence
                 
-                // Show the bounding box.
+                // Show the bounding box with label.
                 let label = String(format: "%@ %.1f", bestClass, confidence * 100)
                 let color = colors[bestClass] ?? UIColor.red
                 boundingBoxViews[i].show(frame: rect, label: label, color: color)
