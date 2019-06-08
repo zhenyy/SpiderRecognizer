@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WbV-IQ-gnz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EF4-FM-ous">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-Cm-cJf">
@@ -129,7 +129,7 @@
                         <viewControllerLayoutGuide type="bottom" id="drT-eS-2d8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SDH-fJ-18h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCM-Vi-PSA">
@@ -193,13 +193,13 @@
         <!--Mode-->
         <scene sceneID="26F-TO-rVb">
             <objects>
-                <viewController id="Vky-Mg-yRY" customClass="RCNNMode" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vky-Mg-yRY" customClass="SSDMode" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ipk-a1-ZIl"/>
                         <viewControllerLayoutGuide type="bottom" id="wLC-68-rLr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OqF-oC-cUK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bie-ds-VIq">
@@ -260,7 +260,7 @@
                         <viewControllerLayoutGuide type="bottom" id="A7c-Eb-AAW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xgv-m6-Fyg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-PW-3Gn">
@@ -321,7 +321,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ixf-ff-QLR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CIt-zd-VJL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-E6-Egz">
@@ -386,7 +386,7 @@
                         <viewControllerLayoutGuide type="bottom" id="MdV-hm-gbi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="au3-0F-5mj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdh-xq-R9a">
@@ -415,7 +415,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FLG-hG-oMR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WdN-Zk-uyy">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -433,7 +433,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m1i-KI-sai" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hVW-Hf-sFx">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -448,13 +448,13 @@
         <!--Upload Photo-->
         <scene sceneID="kg7-wc-XSE">
             <objects>
-                <viewController id="tUi-cV-uJ7" customClass="RCNNUploadPhoto" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tUi-cV-uJ7" customClass="SSDUploadPhoto" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="C2d-lB-OOA"/>
                         <viewControllerLayoutGuide type="bottom" id="qJq-Eh-hVc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DI6-hA-Gnb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-C2-sOC">
@@ -509,13 +509,13 @@
         <!--Scan-->
         <scene sceneID="Hna-Gk-wn9">
             <objects>
-                <viewController id="0Xf-EA-shg" customClass="RCNNScan" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0Xf-EA-shg" customClass="SSDScan" customModule="SpiderRecognizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pzo-w4-lVr"/>
                         <viewControllerLayoutGuide type="bottom" id="RH6-c2-P5s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FT3-vd-fEK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3IB-O7-rYV">
@@ -547,7 +547,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aug-PT-4wr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Ua-7b-UfX">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -565,7 +565,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ch5-ec-SBV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="beA-O7-YIW">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -1,5 +1,5 @@
 //
-//  RCNNScan.swift
+//  SSDScan.swift
 //  SpiderRecognizer
 //
 //  Created by Zhenyuan Ye on 22/4/19.
@@ -15,7 +15,7 @@ import Vision
  Controller that allows user to scan multiple spiders,
  then provides a prediction of spiders in real time
  */
-class RCNNScan: UIViewController {
+class SSDScan: UIViewController {
     
     /** view of scanning */
     @IBOutlet var videoPreview: UIView!
@@ -57,6 +57,7 @@ class RCNNScan: UIViewController {
         setUpCamera()
     }
     
+    /** set up bounding box views */
     func setUpBoundingBoxViews() {
         for _ in 0..<maxBoundingBoxViews {
             boundingBoxViews.append(BoundingBoxView())
@@ -79,6 +80,7 @@ class RCNNScan: UIViewController {
         }
     }
     
+    /** set up camera */
     func setUpCamera() {
         videoCapture = VideoCapture()
         videoCapture.delegate = self
@@ -107,10 +109,15 @@ class RCNNScan: UIViewController {
         resizePreviewLayer()
     }
     
+    /** resize the preview layer */
     func resizePreviewLayer() {
         videoCapture.previewLayer?.frame = videoPreview.bounds
     }
     
+    /**
+     Process predition using model provided
+     - parameter sampleBuffer: CM sample buffer storing video
+     */
     func predict(sampleBuffer: CMSampleBuffer) {
         if currentBuffer == nil, let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) {
             currentBuffer = pixelBuffer
@@ -132,6 +139,11 @@ class RCNNScan: UIViewController {
         }
     }
     
+    /**
+     Process observations and bind the result of prediction on it
+     - parameter request: request for prediction
+     - parameter error: error occurs during prediction
+     */
     func processObservations(for request: VNRequest, error: Error?) {
         DispatchQueue.main.async {
             if let results = request.results as? [VNRecognizedObjectObservation] {
@@ -142,6 +154,10 @@ class RCNNScan: UIViewController {
         }
     }
     
+    /**
+     Show the video and bounding boxes, with predcition result
+     - parameter predictions: an array of object observation
+     */
     func show(predictions: [VNRecognizedObjectObservation]) {
         for i in 0..<boundingBoxViews.count {
             if i < predictions.count {
@@ -184,7 +200,7 @@ class RCNNScan: UIViewController {
     }
 }
 
-extension RCNNScan: VideoCaptureDelegate {
+extension SSDScan: VideoCaptureDelegate {
     func videoCapture(_ capture: VideoCapture, didCaptureVideoFrame sampleBuffer: CMSampleBuffer) {
         predict(sampleBuffer: sampleBuffer)
     }

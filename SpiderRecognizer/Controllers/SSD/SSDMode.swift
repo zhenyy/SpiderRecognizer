@@ -1,5 +1,5 @@
 //
-//  RCNNMode.swift
+//  SSDMode.swift
 //  SpiderRecognizer
 //
 //  Created by Zhenyuan Ye on 28/5/19.
@@ -13,7 +13,7 @@ import UIKit
  - contains two buttons
  - redirect users to scan/upload photo part
  */
-class RCNNMode: UIViewController {
+class SSDMode: UIViewController {
     @IBOutlet weak var scan: UIButton!
     @IBOutlet weak var uploadPhoto: UIButton!
     

@@ -26,11 +26,11 @@
 		AE0E958F227042D100733CEF /* Daddy Long Legs Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9586227042CA00733CEF /* Daddy Long Legs Spider.png */; };
 		AE0E9590227042D100733CEF /* Redback Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9587227042CA00733CEF /* Redback Spider.png */; };
 		AE125E2F229D515800C67709 /* CNNMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE125E2E229D515800C67709 /* CNNMode.swift */; };
-		AE125E31229D517400C67709 /* RCNNMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE125E30229D517400C67709 /* RCNNMode.swift */; };
+		AE125E31229D517400C67709 /* SSDMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE125E30229D517400C67709 /* SSDMode.swift */; };
 		AE33D3F322561F4A003C0DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE33D3F222561F4A003C0DA1 /* Main.storyboard */; };
 		AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33D3F622562132003C0DA1 /* LandingPage.swift */; };
-		AE3F8A78226D931C0070140D /* RCNNUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F8A77226D931C0070140D /* RCNNUploadPhoto.swift */; };
-		AE45AF29226D829C00EA951D /* RCNNScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF28226D829C00EA951D /* RCNNScan.swift */; };
+		AE3F8A78226D931C0070140D /* SSDUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F8A77226D931C0070140D /* SSDUploadPhoto.swift */; };
+		AE45AF29226D829C00EA951D /* SSDScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF28226D829C00EA951D /* SSDScan.swift */; };
 		AE45AF2B226D82DE00EA951D /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF2A226D82DE00EA951D /* VideoCapture.swift */; };
 		AE45AF2D226D830B00EA951D /* BoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */; };
 		AE45AF2F226D836300EA951D /* MobileNetV2_SSDLite.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */; };
@@ -65,11 +65,11 @@
 		AE0E9586227042CA00733CEF /* Daddy Long Legs Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Daddy Long Legs Spider.png"; sourceTree = "<group>"; };
 		AE0E9587227042CA00733CEF /* Redback Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Redback Spider.png"; sourceTree = "<group>"; };
 		AE125E2E229D515800C67709 /* CNNMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNNMode.swift; sourceTree = "<group>"; };
-		AE125E30229D517400C67709 /* RCNNMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCNNMode.swift; sourceTree = "<group>"; };
+		AE125E30229D517400C67709 /* SSDMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDMode.swift; sourceTree = "<group>"; };
 		AE33D3F222561F4A003C0DA1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AE33D3F622562132003C0DA1 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
-		AE3F8A77226D931C0070140D /* RCNNUploadPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCNNUploadPhoto.swift; sourceTree = "<group>"; };
-		AE45AF28226D829C00EA951D /* RCNNScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCNNScan.swift; sourceTree = "<group>"; };
+		AE3F8A77226D931C0070140D /* SSDUploadPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDUploadPhoto.swift; sourceTree = "<group>"; };
+		AE45AF28226D829C00EA951D /* SSDScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSDScan.swift; sourceTree = "<group>"; };
 		AE45AF2A226D82DE00EA951D /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxView.swift; sourceTree = "<group>"; };
 		AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2_SSDLite.mlmodel; sourceTree = "<group>"; };
@@ -114,24 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				AEC9E51822AB7A4B00798353 /* Assets */,
-				AEC9E51922AB7A6600798353 /* Model */,
-				AEEF07BC228D3A6B000C5535 /* GoogleService-Info.plist */,
-				182DFC9A224F799900348D8B /* Info.plist */,
-				182DFC97224F799900348D8B /* LaunchScreen.storyboard */,
-				AE33D3F222561F4A003C0DA1 /* Main.storyboard */,
-				18126DEF22A3B0A100949DE4 /* ConstantsEnum.swift */,
-				182DFC8E224F799600348D8B /* AppDelegate.swift */,
-				AE33D3F622562132003C0DA1 /* LandingPage.swift */,
-				AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */,
-				182DFC90224F799600348D8B /* CNNScan.swift */,
-				AE948C8A2264D2CB00DB6EA2 /* CNNUploadPhoto.swift */,
-				AE45AF28226D829C00EA951D /* RCNNScan.swift */,
-				AE3F8A77226D931C0070140D /* RCNNUploadPhoto.swift */,
-				AE45AF2A226D82DE00EA951D /* VideoCapture.swift */,
-				AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */,
-				AE125E2E229D515800C67709 /* CNNMode.swift */,
-				AE125E30229D517400C67709 /* RCNNMode.swift */,
-				27178815229E634B0043C836 /* BackgroundColorMaker.swift */,
+				AEC9E51922AB7A6600798353 /* Models */,
+				AEDAE95322AB9556009AFC7E /* Supporting Files */,
+				AEDAE95522AB967F009AFC7E /* Views */,
+				AEDAE95422AB9663009AFC7E /* Controllers */,
 			);
 			path = SpiderRecognizer;
 			sourceTree = "<group>";
@@ -153,7 +139,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AE0E957E227042CA00733CEF /* wiki images */ = {
+		AE0E957E227042CA00733CEF /* Gallary Images */ = {
 			isa = PBXGroup;
 			children = (
 				AE0E957F227042CA00733CEF /* Red-Headed Mouse Spider.png */,
@@ -166,14 +152,14 @@
 				AE0E9586227042CA00733CEF /* Daddy Long Legs Spider.png */,
 				AE0E9587227042CA00733CEF /* Redback Spider.png */,
 			);
-			path = "wiki images";
+			path = "Gallary Images";
 			sourceTree = "<group>";
 		};
 		AEC9E51822AB7A4B00798353 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				182DFC95224F799900348D8B /* Assets.xcassets */,
-				AE0E957E227042CA00733CEF /* wiki images */,
+				18126DEF22A3B0A100949DE4 /* ConstantsEnum.swift */,
+				AE0E957E227042CA00733CEF /* Gallary Images */,
 				AE4F13EF229EA13700294491 /* BottonBackgroundColor.png */,
 				AE4F13F0229EA13700294491 /* Team Logo.png */,
 				182DFCA2224F830300348D8B /* icon.png */,
@@ -181,13 +167,67 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		AEC9E51922AB7A6600798353 /* Model */ = {
+		AEC9E51922AB7A6600798353 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */,
 				18126DED22A3A95A00949DE4 /* NASNetMobile.mlmodel */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AEDAE95122AB9419009AFC7E /* CNN */ = {
+			isa = PBXGroup;
+			children = (
+				182DFC90224F799600348D8B /* CNNScan.swift */,
+				AE948C8A2264D2CB00DB6EA2 /* CNNUploadPhoto.swift */,
+				AE125E2E229D515800C67709 /* CNNMode.swift */,
+			);
+			path = CNN;
+			sourceTree = "<group>";
+		};
+		AEDAE95222AB9433009AFC7E /* SSD */ = {
+			isa = PBXGroup;
+			children = (
+				AE45AF28226D829C00EA951D /* SSDScan.swift */,
+				AE45AF2A226D82DE00EA951D /* VideoCapture.swift */,
+				AE3F8A77226D931C0070140D /* SSDUploadPhoto.swift */,
+				AE45AF2C226D830B00EA951D /* BoundingBoxView.swift */,
+				AE125E30229D517400C67709 /* SSDMode.swift */,
+			);
+			path = SSD;
+			sourceTree = "<group>";
+		};
+		AEDAE95322AB9556009AFC7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF07BC228D3A6B000C5535 /* GoogleService-Info.plist */,
+				182DFC95224F799900348D8B /* Assets.xcassets */,
+				182DFC9A224F799900348D8B /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEDAE95422AB9663009AFC7E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				182DFC8E224F799600348D8B /* AppDelegate.swift */,
+				AE33D3F622562132003C0DA1 /* LandingPage.swift */,
+				AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */,
+				AEDAE95122AB9419009AFC7E /* CNN */,
+				AEDAE95222AB9433009AFC7E /* SSD */,
+				27178815229E634B0043C836 /* BackgroundColorMaker.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AEDAE95522AB967F009AFC7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				182DFC97224F799900348D8B /* LaunchScreen.storyboard */,
+				AE33D3F222561F4A003C0DA1 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,17 +369,17 @@
 			files = (
 				18126DF022A3B0A100949DE4 /* ConstantsEnum.swift in Sources */,
 				AE45AF2F226D836300EA951D /* MobileNetV2_SSDLite.mlmodel in Sources */,
-				AE3F8A78226D931C0070140D /* RCNNUploadPhoto.swift in Sources */,
+				AE3F8A78226D931C0070140D /* SSDUploadPhoto.swift in Sources */,
 				AE45AF2B226D82DE00EA951D /* VideoCapture.swift in Sources */,
 				AE45AF2D226D830B00EA951D /* BoundingBoxView.swift in Sources */,
 				27178816229E634B0043C836 /* BackgroundColorMaker.swift in Sources */,
 				AE125E2F229D515800C67709 /* CNNMode.swift in Sources */,
 				18126DEE22A3A95A00949DE4 /* NASNetMobile.mlmodel in Sources */,
-				AE125E31229D517400C67709 /* RCNNMode.swift in Sources */,
+				AE125E31229D517400C67709 /* SSDMode.swift in Sources */,
 				AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */,
 				182DFC91224F799600348D8B /* CNNScan.swift in Sources */,
 				AE8281AD228BEE0800FCF8FA /* SpiderGallery.swift in Sources */,
-				AE45AF29226D829C00EA951D /* RCNNScan.swift in Sources */,
+				AE45AF29226D829C00EA951D /* SSDScan.swift in Sources */,
 				AE948C8B2264D2CB00DB6EA2 /* CNNUploadPhoto.swift in Sources */,
 				182DFC8F224F799600348D8B /* AppDelegate.swift in Sources */,
 			);
@@ -481,14 +521,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52XL6NRZ66;
-				INFOPLIST_FILE = SpiderRecognizer/Info.plist;
+				DEVELOPMENT_TEAM = PWJ9329DU2;
+				INFOPLIST_FILE = "$(SRCROOT)/SpiderRecognizer/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.SpiderRecognizer;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.SpiderRecognizer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -501,14 +541,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 52XL6NRZ66;
-				INFOPLIST_FILE = SpiderRecognizer/Info.plist;
+				DEVELOPMENT_TEAM = PWJ9329DU2;
+				INFOPLIST_FILE = "$(SRCROOT)/SpiderRecognizer/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.SpiderRecognizer;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.SpiderRecognizer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

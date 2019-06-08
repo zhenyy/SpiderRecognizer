@@ -1,5 +1,5 @@
 //
-//  RCNNUploadPhoto.swift
+//  SSDUploadPhoto.swift
 //  SpiderRecognizer
 //
 //  Created by Zhenyuan Ye on 22/4/19.
@@ -12,14 +12,18 @@ import AVFoundation
 import Vision
 import CoreMedia
 
-
-class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
+/**
+ Controller that allows user to upload a picture of spiders,
+ then provides a prediction of spiders
+ */
+class SSDUploadPhoto: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var tips: UILabel!
     @IBOutlet weak var imageView: UIImageView!
 
     var currentBuffer: CVPixelBuffer?
     
+    // set up the object detector provided
     lazy var visionModel: VNCoreMLModel = {
         do {
             return try VNCoreMLModel(for: ConstantsEnum.objectDetector)
@@ -28,6 +32,7 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         }
     }()
     
+    // set up the vision request with the object detector provided
     lazy var visionRequest: VNCoreMLRequest = {
         let request = VNCoreMLRequest(model: visionModel, completionHandler: {
             [weak self] request, error in
@@ -41,6 +46,8 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         return request
     }()
 
+    // no more than 10 bounding boxes can be shown due to the computing power
+    // set up bouding box views and color
     let maxBoundingBoxViews = 10
     var boundingBoxViews = [BoundingBoxView]()
     var colors: [String: UIColor] = [:]
@@ -51,6 +58,7 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         setUpLayers()
     }
     
+    // append label on bounding box
     func setUpBoundingBoxViews() {
         for _ in 0..<maxBoundingBoxViews {
             boundingBoxViews.append(BoundingBoxView())
@@ -73,6 +81,7 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    // show the bounding box in the layer
     func setUpLayers() {
         // Add the bounding box layers to the UI, on top of the video preview.
         for box in self.boundingBoxViews {
@@ -80,6 +89,7 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    // predict and generate result using model provided
     func predict(pixelBuffer: CVPixelBuffer) {
         tips.text = ""
         if currentBuffer == nil {
@@ -94,6 +104,7 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    // process the observations
     func processObservations(for request: VNRequest, error: Error?) {
         DispatchQueue.main.async {
             if let results = request.results as? [VNRecognizedObjectObservation] {
@@ -104,6 +115,7 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    // show the result of prediction
     func show(predictions: [VNRecognizedObjectObservation]) {
         for i in 0..<boundingBoxViews.count {
             if i < predictions.count {
@@ -145,6 +157,10 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    /**
+     Open camera and accept the photo taken
+     - parameter sender: the button of taking picture
+     */
     @IBAction func camera(_ sender: Any) {
         if !UIImagePickerController.isSourceTypeAvailable(.camera) {
             return
@@ -156,6 +172,10 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
         present(cameraPicker, animated: true)
     }
     
+    /**
+     Open library and accept the photo selected
+     - parameter sender: the button of library
+     */
     @IBAction func openLibrary(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.allowsEditing = false
@@ -176,22 +196,30 @@ class RCNNUploadPhoto: UIViewController, UINavigationControllerDelegate {
     
 }
 
-extension RCNNUploadPhoto: UIImagePickerControllerDelegate {
+extension SSDUploadPhoto: UIImagePickerControllerDelegate {
     func prediction(_ image: CVPixelBuffer) {
         predict(pixelBuffer: image)
     }
     
+    /**
+     Close the picker window if the user selected cancel
+     - parameter picker: controller of image picker
+     */
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
     
+    /**
+     Capture the picture selected and predict using model provided
+     - parameter picker: controller of image picker
+     - parameter didFinishPickingMediaWithInfo: an array of String indicating the information of picked media
+     */
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         picker.dismiss(animated: true)
-//        classifier.text = "Analyzing Image..."
         guard let image = info["UIImagePickerControllerOriginalImage"] as? UIImage else {
             return
-        } //1
+        }
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 299, height: 299), true, 2.0)
         image.draw(in: CGRect(x: 0, y: 0, width: 299, height: 299))

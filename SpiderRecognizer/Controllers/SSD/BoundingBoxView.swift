@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
+/**
+ The bounding box that surrounding spiders during prediction,
+ which are captured by object detector
+ */
 class BoundingBoxView {
     let shapeLayer: CAShapeLayer
     let textLayer: CATextLayer
     
+    // initial the shape layer and text layer
     init() {
         shapeLayer = CAShapeLayer()
         shapeLayer.fillColor = UIColor.clear.cgColor
@@ -28,11 +33,21 @@ class BoundingBoxView {
         textLayer.alignmentMode = CATextLayerAlignmentMode.center
     }
     
+    /**
+     Add the shape layer and text layer to current layer
+     - parameter parent: current layer
+     */
     func addToLayer(_ parent: CALayer) {
         parent.addSublayer(shapeLayer)
         parent.addSublayer(textLayer)
     }
     
+    /**
+     Present the shape layer and text layer
+     - parameter frame: size, position of the bounding box
+     - parameter label: prediction result
+     - parameter color: color of the bounding box
+     */
     func show(frame: CGRect, label: String, color: UIColor) {
         CATransaction.setDisableActions(true)
         
@@ -57,6 +72,7 @@ class BoundingBoxView {
         textLayer.frame = CGRect(origin: textOrigin, size: textSize)
     }
     
+    /** Hide bounding boxes */
     func hide() {
         shapeLayer.isHidden = true
         textLayer.isHidden = true

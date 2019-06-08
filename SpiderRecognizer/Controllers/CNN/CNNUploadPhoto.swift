@@ -225,6 +225,7 @@ extension CNNUploadPhoto: UIImagePickerControllerDelegate {
     
     /** Send the prediction result & location to the firebase database */
     @objc func sendSpiderLocation() {
+        // retrieve a random key as the id of this spider
         let key = refSpider.childByAutoId().key
         let Spider = [ "id":key,
                        "SpiderName":spiderName!,
