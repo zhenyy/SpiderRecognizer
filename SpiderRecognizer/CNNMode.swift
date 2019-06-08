@@ -8,10 +8,16 @@
 
 import UIKit
 
+/**
+ The controller for the simple mode page
+ - contains two buttons
+ - redirect users to scan/upload photo part
+ */
 class CNNMode: UIViewController {
     @IBOutlet weak var scan: UIButton!
     @IBOutlet weak var uploadPhoto: UIButton!
     
+    // set up the head color and bottom color
     let HeadColor = UIColor(red: 73/255, green: 82/255, blue: 99/255, alpha: 1)
     let bottomColor = UIColor(red: 31/255, green: 40/255, blue: 57/255, alpha: 1)
     

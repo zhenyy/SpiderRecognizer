@@ -11,7 +11,10 @@ import UIKit
 import AVFoundation
 import Vision
 
-
+/**
+ Controller that allows user to scan a spider,
+ then provides a prediction of that spider in real time
+ */
 class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     // create a label to hold the spider name and confidence
@@ -25,7 +28,11 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         return label
     }()
     
-    
+    /**
+     set up the label which shows the result of prediction
+     - constrain the label in the center
+     - constrain the the label to 50 pixels from the bottom
+     */
     func setupLabel() {
         // constrain the label in the center
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -33,7 +40,6 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         // constrain the the label to 50 pixels from the bottom
         label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
     }
-    
     
     override func viewDidLoad() {
         // call the parent function
@@ -46,7 +52,6 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         
     }
 
-    
     override func didReceiveMemoryWarning() {
         // call the parent function
         super.didReceiveMemoryWarning()
@@ -54,7 +59,9 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    /**
+     capture the video and buffer it
+     */
     func setupCaptureSession() {
         // create a new capture session
         let captureSession = AVCaptureSession()
@@ -84,7 +91,12 @@ class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
         captureSession.startRunning()
     }
     
-    
+    /**
+     Use the captured video, and generate a prediction using model provided
+     - parameter output: video output
+     - parameter sampleBuffer: buffer that stores the sample
+     - parameter connection: connection to the capture session
+     */
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         // load our CoreML model
         guard let model = try? VNCoreMLModel(for: ConstantsEnum.imageClassifier) else { return }

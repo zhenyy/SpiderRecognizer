@@ -9,13 +9,22 @@
 import Foundation
 import UIKit
 
-
+/**
+ An enum stores all static information of this project
+ - information of image classifier model and object detector model
+ - poisonousness level of spiders
+ - color mapping of poisonousness level
+ - introduction of 9 kinds of spiders
+ */
 public enum ConstantsEnum {
     
+    /** information of image classifier model */
     static let imageClassifier = NASNetMobile().model
     
+    /** information of object detector model */
     static let objectDetector = MobileNetV2_SSDLite().model
     
+    /** poisonousness level of spiders */
     static let spiderMapping = ["Daddy Long Legs Spider": "Low Risk",
                                 "Funnel-Web Spider": "Deadly & Dangerous",
                                 "Garden Orb Weaver Spider": "Low Risk",
@@ -26,10 +35,12 @@ public enum ConstantsEnum {
                                 "Tarantula Spider": "Toxic & Painful Bite",
                                 "White-Tailed Spider": "Deadly & Dangerous"]
     
+    /** color mapping of poisonousness level */
     static let colorMapping = ["Low Risk": UIColor.green,
                                "Deadly & Dangerous": UIColor.red,
                                "Toxic & Painful Bite": UIColor.orange]
     
+    /** introduction of 9 kinds of spiders */
     static let spiderIntro = [
                               "Tarantula Spider": "Australian Tarantula Spider: it has a large, heavy body, which varies in colour from dark chocolate-brown to pale fawn, often with a silvery sheen. Although large, Australian tarantulas are not usually aggressive, but sometimes they bite human. The bite is painful, as the fangs are large and as long as those of many snakes. Severe illness sometimes results and nausea and vomiting for six to eight hours",
                               "Daddy Long Legs Spider": "Daddy Long Legs Spider: also known as Pholcidae, which is found in every continent in the world. The body (resembling the shape of a peanut) being approximately 2–10 mm (0.08-0.39 inches) in length with legs which may be up to 50 mm (1.97 inches) long.  they almost never bite. But they were able to penetrate human skin, and were reported nothing more than a very mild burning sensation from the venom that lasted just a few seconds.",

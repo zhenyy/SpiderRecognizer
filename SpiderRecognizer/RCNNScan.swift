@@ -11,13 +11,20 @@ import CoreML
 import UIKit
 import Vision
 
+/**
+ Controller that allows user to scan multiple spiders,
+ then provides a prediction of spiders in real time
+ */
 class RCNNScan: UIViewController {
     
+    /** view of scanning */
     @IBOutlet var videoPreview: UIView!
     
+    // set up the video captured and pixel buffer
     var videoCapture: VideoCapture!
     var currentBuffer: CVPixelBuffer?
     
+    // create Core ML model using the object detector model provided
     lazy var visionModel: VNCoreMLModel = {
         do {
             return try VNCoreMLModel(for: ConstantsEnum.objectDetector)
@@ -39,6 +46,7 @@ class RCNNScan: UIViewController {
         return request
     }()
     
+    // set up the bounding box
     let maxBoundingBoxViews = 10
     var boundingBoxViews = [BoundingBoxView]()
     var colors: [String: UIColor] = [:]

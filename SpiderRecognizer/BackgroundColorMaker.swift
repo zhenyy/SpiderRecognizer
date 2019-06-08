@@ -8,7 +8,15 @@
 
 import Foundation
 import UIKit
+
 extension UIView {
+    /**
+     Set the background of 3 pages
+     - change the background color
+     - set up gradient layer
+     - parameter colorOne: color on the start of the gradient
+     - parameter colorTwo: color on the end of the gradient
+     */
     func setGradientBackground(colorOne: UIColor, colorTwo:UIColor){
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds

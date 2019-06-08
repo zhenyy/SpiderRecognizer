@@ -113,13 +113,8 @@
 		182DFC8D224F799600348D8B /* SpiderRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				182DFC95224F799900348D8B /* Assets.xcassets */,
-				AE0E957E227042CA00733CEF /* wiki images */,
-				AE4F13EF229EA13700294491 /* BottonBackgroundColor.png */,
-				AE4F13F0229EA13700294491 /* Team Logo.png */,
-				182DFCA2224F830300348D8B /* icon.png */,
-				AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */,
-				18126DED22A3A95A00949DE4 /* NASNetMobile.mlmodel */,
+				AEC9E51822AB7A4B00798353 /* Assets */,
+				AEC9E51922AB7A6600798353 /* Model */,
 				AEEF07BC228D3A6B000C5535 /* GoogleService-Info.plist */,
 				182DFC9A224F799900348D8B /* Info.plist */,
 				182DFC97224F799900348D8B /* LaunchScreen.storyboard */,
@@ -172,6 +167,27 @@
 				AE0E9587227042CA00733CEF /* Redback Spider.png */,
 			);
 			path = "wiki images";
+			sourceTree = "<group>";
+		};
+		AEC9E51822AB7A4B00798353 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				182DFC95224F799900348D8B /* Assets.xcassets */,
+				AE0E957E227042CA00733CEF /* wiki images */,
+				AE4F13EF229EA13700294491 /* BottonBackgroundColor.png */,
+				AE4F13F0229EA13700294491 /* Team Logo.png */,
+				182DFCA2224F830300348D8B /* icon.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AEC9E51922AB7A6600798353 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */,
+				18126DED22A3A95A00949DE4 /* NASNetMobile.mlmodel */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
