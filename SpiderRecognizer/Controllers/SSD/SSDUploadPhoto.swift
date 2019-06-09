@@ -23,6 +23,15 @@ class SSDUploadPhoto: UIViewController, UINavigationControllerDelegate {
 
     var currentBuffer: CVPixelBuffer?
     
+    /**
+     back to the previous controller
+     - parameter sender: button going back to the prevous page
+     */
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    
     // create VNCoreMLModel instance using the object detector model provided
     lazy var visionModel: VNCoreMLModel = {
         do {

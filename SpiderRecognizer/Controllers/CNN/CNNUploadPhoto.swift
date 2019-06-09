@@ -33,6 +33,14 @@ class CNNUploadPhoto: UIViewController, UINavigationControllerDelegate, CLLocati
     /** label of the result of prediction */
     @IBOutlet weak var classifier: UILabel!
     
+    /**
+     back to the previous controller
+     - parameter sender: button going back to the prevous page
+     */
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /** latitude of the user's location */
     var lat:String?
     

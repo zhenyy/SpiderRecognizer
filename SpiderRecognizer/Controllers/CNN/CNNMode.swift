@@ -17,6 +17,14 @@ class CNNMode: UIViewController {
     @IBOutlet weak var scan: UIButton!
     @IBOutlet weak var uploadPhoto: UIButton!
     
+    /**
+     back to the previous controller
+     - parameter sender: button going back to the prevous page
+     */
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     // set up the head color and bottom color
     let HeadColor = UIColor(red: 73/255, green: 82/255, blue: 99/255, alpha: 1)
     let bottomColor = UIColor(red: 31/255, green: 40/255, blue: 57/255, alpha: 1)

@@ -20,6 +20,14 @@ class SSDScan: UIViewController {
     /** view of scanning */
     @IBOutlet var videoPreview: UIView!
     
+    /**
+     back to the previous controller
+     - parameter sender: button going back to the prevous page
+     */
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     // set up the video captured and pixel buffer
     var videoCapture: VideoCapture!
     var currentBuffer: CVPixelBuffer?

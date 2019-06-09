@@ -17,6 +17,14 @@ import Vision
  */
 class CNNScan: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
+    /**
+     back to the previous controller
+     - parameter sender: button going back to the prevous page
+     */
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     // create a label to hold the spider name and confidence
     let label: UILabel = {
         let label = UILabel()

@@ -18,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WbV-IQ-gnz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EF4-FM-ous">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-Cm-cJf">
@@ -106,7 +106,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="dJN-pa-QwB" kind="presentation" id="yLz-1a-X6r"/>
+                                    <action selector="back:" destination="oQo-JU-C61" eventType="touchUpInside" id="AiQ-av-sQj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdk-VH-1u3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2618.840579710145" y="116.57608695652175"/>
+            <point key="canvasLocation" x="-1709" y="-620"/>
         </scene>
         <!--Landing Page-->
         <scene sceneID="IbM-P6-EcJ">
@@ -129,7 +129,7 @@
                         <viewControllerLayoutGuide type="bottom" id="drT-eS-2d8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SDH-fJ-18h">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCM-Vi-PSA">
@@ -199,7 +199,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wLC-68-rLr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OqF-oC-cUK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bie-ds-VIq">
@@ -225,7 +225,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dJN-pa-QwB" kind="presentation" id="KAD-3O-Bg8"/>
+                                    <action selector="back:" destination="Vky-Mg-yRY" eventType="touchUpInside" id="tY1-YL-fSX"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Recognize multiple spiders" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zih-ro-KZo">
@@ -260,7 +260,7 @@
                         <viewControllerLayoutGuide type="bottom" id="A7c-Eb-AAW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Xgv-m6-Fyg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhk-PW-3Gn">
@@ -286,7 +286,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dJN-pa-QwB" kind="presentation" id="jXN-Z8-adc"/>
+                                    <action selector="back:" destination="4oi-FG-6Ii" eventType="touchUpInside" id="2qC-Of-MFn"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Team Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Ya-l5-mpc">
@@ -321,7 +321,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ixf-ff-QLR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CIt-zd-VJL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-E6-Egz">
@@ -351,7 +351,7 @@
                     <navigationItem key="navigationItem" title="Upload Photo" id="BBF-e8-H0x">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="1Pa-tq-weN">
                             <connections>
-                                <segue destination="4oi-FG-6Ii" kind="presentation" id="Cs7-VF-h3j"/>
+                                <action selector="back:" destination="0pn-65-1aZ" id="MAs-h2-oxA"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -386,7 +386,7 @@
                         <viewControllerLayoutGuide type="bottom" id="MdV-hm-gbi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="au3-0F-5mj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdh-xq-R9a">
@@ -400,7 +400,7 @@
                     <navigationItem key="navigationItem" title="Scan" id="Qrz-ep-r1e">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="zeK-Wq-RXu">
                             <connections>
-                                <segue destination="4oi-FG-6Ii" kind="presentation" id="VYU-4V-bjJ"/>
+                                <action selector="back:" destination="GRz-bv-mXt" id="IGb-VQ-vSx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -415,7 +415,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FLG-hG-oMR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WdN-Zk-uyy">
-                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -433,7 +433,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m1i-KI-sai" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hVW-Hf-sFx">
-                        <rect key="frame" x="0.0" y="20" width="600" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -454,7 +454,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qJq-Eh-hVc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DI6-hA-Gnb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-C2-sOC">
@@ -481,7 +481,7 @@
                     <navigationItem key="navigationItem" title="Upload Photo" id="h6e-aD-TeW">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="QSX-WP-9qW">
                             <connections>
-                                <segue destination="Vky-Mg-yRY" kind="presentation" id="XnR-wh-iSV"/>
+                                <action selector="back:" destination="tUi-cV-uJ7" id="YxY-fD-uZw"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -515,7 +515,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RH6-c2-P5s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FT3-vd-fEK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3IB-O7-rYV">
@@ -529,7 +529,7 @@
                     <navigationItem key="navigationItem" title="Scan" id="zZA-Oc-rNG">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="k8B-yU-i9q">
                             <connections>
-                                <segue destination="Vky-Mg-yRY" kind="presentation" id="Jkz-sb-osp"/>
+                                <action selector="back:" destination="0Xf-EA-shg" id="WVP-af-FYX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -547,7 +547,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aug-PT-4wr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Ua-7b-UfX">
-                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -565,7 +565,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ch5-ec-SBV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="beA-O7-YIW">
-                        <rect key="frame" x="0.0" y="20" width="600" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -592,9 +592,4 @@
         <image name="White-Tailed Spider.png" width="970" height="612"/>
         <image name="icon.png" width="256" height="256"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="x17-Gj-Rtn"/>
-        <segue reference="i07-92-eKI"/>
-        <segue reference="KAD-3O-Bg8"/>
-    </inferredMetricsTieBreakers>
 </document>

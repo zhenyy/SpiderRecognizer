@@ -16,6 +16,14 @@ class SpiderGallery: UIViewController {
     /** The label showing the prediction result */
     @IBOutlet weak var introduction: UILabel!
     
+    /**
+     back to the previous controller
+     - parameter sender: button going back to the prevous page
+     */
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /** The image that users focus */
     var vImg: UIImageView!
     
