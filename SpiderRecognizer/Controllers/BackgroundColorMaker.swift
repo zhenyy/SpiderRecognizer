@@ -2,8 +2,8 @@
 //  BackgroundColorMaker.swift
 //  SpiderRecognizer
 //
-//  Created by vincentt on 28/5/19.
-//  Copyright © 2019 DonghanYang. All rights reserved.
+//  Created by Xueyang Ding on 28/5/19.
+//  Copyright © 2019 Xueyang Ding. All rights reserved.
 //
 
 import Foundation
@@ -28,4 +28,3 @@ extension UIView {
         layer.insertSublayer(gradientLayer, at: 0)
     }
 }
-

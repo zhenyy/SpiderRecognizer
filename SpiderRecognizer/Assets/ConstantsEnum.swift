@@ -19,7 +19,7 @@ import UIKit
 public enum ConstantsEnum {
     
     /** information of image classifier model */
-    static let imageClassifier = NASNetMobile().model
+    static let imageClassifier = MobileNetV2().model
     
     /** information of object detector model */
     static let objectDetector = MobileNetV2_SSDLite().model

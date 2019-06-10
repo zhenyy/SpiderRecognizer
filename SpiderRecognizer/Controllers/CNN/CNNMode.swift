@@ -3,7 +3,7 @@
 //  SpiderRecognizer
 //
 //  Created by Zhenyuan Ye on 28/5/19.
-//  Copyright © 2019 DonghanYang. All rights reserved.
+//  Copyright © 2019 Zhenyuan Ye. All rights reserved.
 //
 
 import UIKit

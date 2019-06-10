@@ -2,7 +2,9 @@
 //  VideoCapture.swift
 //  SpiderRecognizer
 //
-//  Created by Zhenyuan Ye on 22/4/19.
+//  Created by Matthijs Hollemans
+//  Based on: https://machinethink.net/blog/mobilenet-ssdlite-coreml/
+//  Modified by Zhenyuan Ye, Donghan Yang
 //  Copyright © 2019 DonghanYang. All rights reserved.
 //
 

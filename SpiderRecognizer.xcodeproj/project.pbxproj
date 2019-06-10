@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0D4358780465DA562AF22161 /* Pods_SpiderRecognizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30369E2639470CFB894CF986 /* Pods_SpiderRecognizer.framework */; };
-		18126DEE22A3A95A00949DE4 /* NASNetMobile.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 18126DED22A3A95A00949DE4 /* NASNetMobile.mlmodel */; };
 		18126DF022A3B0A100949DE4 /* ConstantsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18126DEF22A3B0A100949DE4 /* ConstantsEnum.swift */; };
 		182DFC8F224F799600348D8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFC8E224F799600348D8B /* AppDelegate.swift */; };
 		182DFC91224F799600348D8B /* CNNScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182DFC90224F799600348D8B /* CNNScan.swift */; };
 		182DFC96224F799900348D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC95224F799900348D8B /* Assets.xcassets */; };
 		182DFC99224F799900348D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182DFC97224F799900348D8B /* LaunchScreen.storyboard */; };
 		182DFCA3224F830300348D8B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 182DFCA2224F830300348D8B /* icon.png */; };
+		1837AA4422AE3DC3000D293E /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1837AA4322AE3DC3000D293E /* MobileNetV2.mlmodel */; };
 		27178816229E634B0043C836 /* BackgroundColorMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27178815229E634B0043C836 /* BackgroundColorMaker.swift */; };
 		AE0E9588227042D100733CEF /* Red-Headed Mouse Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E957F227042CA00733CEF /* Red-Headed Mouse Spider.png */; };
 		AE0E9589227042D100733CEF /* Funnel-Web Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E9580227042CA00733CEF /* Funnel-Web Spider.png */; };
@@ -42,7 +42,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18126DED22A3A95A00949DE4 /* NASNetMobile.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = NASNetMobile.mlmodel; sourceTree = "<group>"; };
 		18126DEF22A3B0A100949DE4 /* ConstantsEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsEnum.swift; sourceTree = "<group>"; };
 		182DFC8B224F799600348D8B /* SpiderRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiderRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182DFC8E224F799600348D8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		182DFC98224F799900348D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182DFC9A224F799900348D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182DFCA2224F830300348D8B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		1837AA4322AE3DC3000D293E /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		27178815229E634B0043C836 /* BackgroundColorMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorMaker.swift; sourceTree = "<group>"; };
 		30369E2639470CFB894CF986 /* Pods_SpiderRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiderRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F8A1EA8A24761F9F9F39B0 /* Pods-SpiderRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiderRecognizer.release.xcconfig"; path = "Target Support Files/Pods-SpiderRecognizer/Pods-SpiderRecognizer.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 		AEC9E51822AB7A4B00798353 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				18126DEF22A3B0A100949DE4 /* ConstantsEnum.swift */,
 				AE0E957E227042CA00733CEF /* Gallary Images */,
+				18126DEF22A3B0A100949DE4 /* ConstantsEnum.swift */,
 				AE4F13EF229EA13700294491 /* BottonBackgroundColor.png */,
 				AE4F13F0229EA13700294491 /* Team Logo.png */,
 				182DFCA2224F830300348D8B /* icon.png */,
@@ -170,8 +170,8 @@
 		AEC9E51922AB7A6600798353 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1837AA4322AE3DC3000D293E /* MobileNetV2.mlmodel */,
 				AE45AF2E226D836300EA951D /* MobileNetV2_SSDLite.mlmodel */,
-				18126DED22A3A95A00949DE4 /* NASNetMobile.mlmodel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,8 +201,8 @@
 		AEDAE95322AB9556009AFC7E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AEEF07BC228D3A6B000C5535 /* GoogleService-Info.plist */,
 				182DFC95224F799900348D8B /* Assets.xcassets */,
+				AEEF07BC228D3A6B000C5535 /* GoogleService-Info.plist */,
 				182DFC9A224F799900348D8B /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -214,9 +214,9 @@
 				182DFC8E224F799600348D8B /* AppDelegate.swift */,
 				AE33D3F622562132003C0DA1 /* LandingPage.swift */,
 				AE8281AC228BEE0800FCF8FA /* SpiderGallery.swift */,
+				27178815229E634B0043C836 /* BackgroundColorMaker.swift */,
 				AEDAE95122AB9419009AFC7E /* CNN */,
 				AEDAE95222AB9433009AFC7E /* SSD */,
-				27178815229E634B0043C836 /* BackgroundColorMaker.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -370,11 +370,11 @@
 				18126DF022A3B0A100949DE4 /* ConstantsEnum.swift in Sources */,
 				AE45AF2F226D836300EA951D /* MobileNetV2_SSDLite.mlmodel in Sources */,
 				AE3F8A78226D931C0070140D /* SSDUploadPhoto.swift in Sources */,
+				1837AA4422AE3DC3000D293E /* MobileNetV2.mlmodel in Sources */,
 				AE45AF2B226D82DE00EA951D /* VideoCapture.swift in Sources */,
 				AE45AF2D226D830B00EA951D /* BoundingBoxView.swift in Sources */,
 				27178816229E634B0043C836 /* BackgroundColorMaker.swift in Sources */,
 				AE125E2F229D515800C67709 /* CNNMode.swift in Sources */,
-				18126DEE22A3A95A00949DE4 /* NASNetMobile.mlmodel in Sources */,
 				AE125E31229D517400C67709 /* SSDMode.swift in Sources */,
 				AE33D3F722562132003C0DA1 /* LandingPage.swift in Sources */,
 				182DFC91224F799600348D8B /* CNNScan.swift in Sources */,
@@ -521,14 +521,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PWJ9329DU2;
+				DEVELOPMENT_TEAM = 52XL6NRZ66;
 				INFOPLIST_FILE = "$(SRCROOT)/SpiderRecognizer/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.SpiderRecognizer2;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.SpiderRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -541,14 +541,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PWJ9329DU2;
+				DEVELOPMENT_TEAM = 52XL6NRZ66;
 				INFOPLIST_FILE = "$(SRCROOT)/SpiderRecognizer/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.SpiderRecognizer2;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.SpiderRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

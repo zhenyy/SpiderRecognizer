@@ -3,7 +3,7 @@
 //  SpiderRecognizer
 //
 //  Created by Zhenyuan Ye on 22/4/19.
-//  Copyright © 2019 DonghanYang. All rights reserved.
+//  Copyright © 2019 Matthijs Hollemans. All rights reserved.
 //
 
 import Foundation
@@ -78,4 +78,3 @@ class BoundingBoxView {
         textLayer.isHidden = true
     }
 }
-

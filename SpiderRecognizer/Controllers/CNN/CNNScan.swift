@@ -2,8 +2,10 @@
 //  ViewController.swift
 //  SpiderRecognizer
 //
-//  Created by Benny on 30/3/19.
-//  Copyright © 2019 DonghanYang. All rights reserved.
+//  Based on: https://www.pyimagesearch.com/2018/04/23/running-keras-models-on-ios-with-coreml/
+//  Created by Adrian Rosebrock
+//  Modified by DonghanYang
+//  Copyright © 2019 Adrian Rosebrock. All rights reserved.
 //
 
 // import necessary packages
