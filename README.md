@@ -1,6 +1,9 @@
 # Spider Recognition iOS App
-This repository contains swift scripts and Core ML models for our real-time spider recognition app
+This repository contains swift scripts and Core ML models for our real-time spider recognition app  
 
+A video demo of our app: https://www.youtube.com/watch?v=LvMvKccfGkA&t=2s  
+
+Link to the deep learning model development repo: https://github.com/zhenyy/poisonous-spider-recognition
 ## Basic mode
 Offers two functions:   
 - Classifying a single spider by taking a photo or supplying a photo from library
@@ -13,7 +16,9 @@ Offers two functions:
 ## Spider Gallery
 A gallery contains detailed introductions of different spiders
 ## Spider Map
-A map showing the locations of the spiders shared by users
+A map showing the locations of the spiders shared by users  
+
+Link to the Spider Map repo: https://github.com/zhenyy/SpiderMap  
 ## Things that we used
 - The project is not possible without this nice series of tutorials created by [pyimagesearch](https://www.pyimagesearch.com/):  
 [How to (quickly) build a deep learning image dataset](https://www.pyimagesearch.com/2018/04/09/how-to-quickly-build-a-deep-learning-image-dataset/)  
