@@ -1,21 +1,19 @@
 # Spider Recognition iOS App
-This repository contains codes and scripts for our real-time spider recognition app: a mobile deep learning application that recognises Australian venomous spider in real time
+This repository contains swift scripts and Core ML models for our real-time spider recognition app
 
-sdfasdf 
-
-## Simple mode
-Take picture / Scan, it will tell you what kind of spider is it & if it is poisonous  
-Even more, you can send the information of that spider to cloud and share with others
+## Basic mode
+Offers two functions:   
+- Classifying a single spider by taking a photo or supplying a photo from library
+- Real-time classification from camera feed 
+- Display both spider type and toxicity
 ## Advanced mode
-Amazing features that can deal with multiple spiders
+- Locating and classifying multiple spiders by taking a photo or supplying a photo from library
+- Real-time detection from camera feed 
+- Display spider types, toxicity and bounding boxes indicate spider locations
 ## Spider Gallery
-A Gallery showing introduction to different spiders
+A gallery contains detailed introductions of different spiders
 ## Spider Map
-A map showing the locations of the spiders shared by others
-
-
-
-
+A map showing the locations of the spiders shared by users
 ## Things that we used
 - The project is not possible without this nice series of tutorials created by [pyimagesearch](https://www.pyimagesearch.com/):  
 [How to (quickly) build a deep learning image dataset](https://www.pyimagesearch.com/2018/04/09/how-to-quickly-build-a-deep-learning-image-dataset/)  
